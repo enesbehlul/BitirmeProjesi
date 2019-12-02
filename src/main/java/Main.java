@@ -3,7 +3,8 @@ import examples.StarterGhostComm.Blinky;
 import examples.StarterGhostComm.Inky;
 import examples.StarterGhostComm.Pinky;
 import examples.StarterGhostComm.Sue;
-import examples.StarterPacManOneJunction.MyPacMan;
+import entrants.pacman.enesbehlul.MyPacMan;
+//import examples.StarterPacMan.MyPacMan;
 import pacman.Executor;
 import pacman.controllers.IndividualGhostController;
 import pacman.controllers.MASController;
@@ -18,7 +19,6 @@ import java.util.EnumMap;
 public class Main {
 
     public static void main(String[] args) {
-
         Executor executor = new Executor.Builder()
                 .setVisual(true)
                 .setTickLimit(4000)
@@ -32,5 +32,8 @@ public class Main {
         controllers.put(GHOST.SUE, new Sue());
 
         executor.runGameTimed(new MyPacMan(), new MASController(controllers));
+
+        
+
     }
 }

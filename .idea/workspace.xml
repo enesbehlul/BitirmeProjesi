@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="" />
+    <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examples/StarterPacMan/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examples/StarterPacMan/MyPacMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterPacMan/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterPacMan/MyPacMan.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Rdw3xZEqqrR8uGNKZdJJs0Zxdh" />
   <component name="PropertiesComponent">
@@ -55,21 +66,44 @@
       <workItem from="1570550689273" duration="583000" />
       <workItem from="1570562713430" duration="147000" />
       <workItem from="1570562877414" duration="1430000" />
+      <workItem from="1570565475655" duration="30000" />
+      <workItem from="1570592284621" duration="145000" />
+      <workItem from="1570592803599" duration="191000" />
+      <workItem from="1570635616930" duration="879000" />
+      <workItem from="1570636738387" duration="3277000" />
+      <workItem from="1570647460487" duration="845000" />
+      <workItem from="1570795834993" duration="1835000" />
+      <workItem from="1570828236210" duration="601000" />
+      <workItem from="1570899735522" duration="10000" />
+      <workItem from="1570996233755" duration="632000" />
+      <workItem from="1570998339107" duration="769000" />
+      <workItem from="1571039825548" duration="3123000" />
+      <workItem from="1571068765742" duration="576000" />
+      <workItem from="1571088721190" duration="290000" />
+      <workItem from="1571338602588" duration="3811000" />
+      <workItem from="1571380249495" duration="2665000" />
+      <workItem from="1571561171546" duration="966000" />
+      <workItem from="1571562154895" duration="13000" />
+      <workItem from="1571591631948" duration="139000" />
+      <workItem from="1571596290153" duration="1667000" />
+      <workItem from="1575263982477" duration="27000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
