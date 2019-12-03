@@ -9,12 +9,23 @@ import pacman.game.Game;
  */
 public class Inky extends IndividualGhostController {
 
+    static int currentGhostLocation, pacmanLocation;
+
     public Inky() {
         super(Constants.GHOST.INKY);
     }
 
     @Override
     public Constants.MOVE getMove(Game game, long timeDue) {
-        return null;
+        currentGhostLocation = game.getGhostCurrentNodeIndex(Constants.GHOST.INKY);
+        pacmanLocation = game.getPacmanCurrentNodeIndex();
+        if (pacmanLocation != -1)
+            System.out.println(pacmanLocation);
+        if(game.isJunction(currentGhostLocation)){
+            System.out.println("donemec");
+            return game.getNextMoveTowardsTarget(currentGhostLocation, pacmanLocation, Constants.DM.PATH);
+        }
+        else
+            return null;
     }
 }

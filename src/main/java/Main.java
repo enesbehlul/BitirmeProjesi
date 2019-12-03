@@ -1,7 +1,7 @@
 
-import examples.StarterGhostComm.Blinky;
-import examples.StarterGhostComm.Inky;
-import examples.StarterGhostComm.Pinky;
+import entrants.ghosts.enesbehlul.Blinky;
+import entrants.ghosts.enesbehlul.Inky;
+import entrants.ghosts.enesbehlul.Pinky;
 import examples.StarterGhostComm.Sue;
 import entrants.pacman.enesbehlul.MyPacMan;
 //import examples.StarterPacMan.MyPacMan;

@@ -29,7 +29,7 @@ public class MyPacMan extends PacmanController {
                 int ghostLocation = game.getGhostCurrentNodeIndex(ghost);
                 if (ghostLocation != -1) {
                     if (game.getShortestPathDistance(current, ghostLocation) < MIN_DISTANCE) {
-                        System.out.println("Evading Ghost");
+                        //System.out.println("Evading Ghost");
                         return game.getNextMoveAwayFromTarget(current, ghostLocation, Constants.DM.PATH);
                     }
                 }
@@ -37,18 +37,18 @@ public class MyPacMan extends PacmanController {
             if (game.getGhostEdibleTime(ghost) > 0) {
                 int ghostLocation = game.getGhostCurrentNodeIndex(ghost);
                 if (ghostLocation != -1) {
-                    System.out.println("Hunting Ghost");
+                    //System.out.println("Hunting Ghost");
                     return game.getNextMoveTowardsTarget(current, ghostLocation, Constants.DM.PATH);
                 }
             }
         }
 
         if (game.isJunction(current) || current == temp){
-            System.out.println("true");
             random = new Random().nextInt(MOVE.values().length);
             return MOVE.values()[random];
         }
         temp = current;
         return MOVE.values()[random];
+
     }
 }

@@ -2,13 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Blinky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Blinky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Inky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Inky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Pinky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Pinky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Sue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Sue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examples/StarterPacMan/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/examples/StarterPacMan/MyPacMan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Blinky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Blinky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Inky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Inky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Pinky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Pinky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Sue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Sue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterGhost/POGhost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterGhost/POGhost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterGhostComm/POCommGhost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterGhostComm/POCommGhost.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterISMCTS/ISNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterISMCTS/ISNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterISMCTS/InformationSetMCTSPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterISMCTS/InformationSetMCTSPacMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/LocEvalPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/LocEvalPacMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/NNTrainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/NNTrainer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/NeuralNet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/NeuralNet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/Neuron.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/Neuron.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/NeuronLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/NeuronLayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/NNLocPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/NNLocPacMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/NNPacMan$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/NNPacMan$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/NNPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/NNPacMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/SimpleNNLocPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/SimpleNNLocPacMan.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterPacMan/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterPacMan/MyPacMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterPacManOneJunction/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterPacManOneJunction/MyPacMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/demo/DemoPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/demo/DemoPacMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/prediction/GhostPredictions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/prediction/GhostPredictions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/prediction/IndividualLocations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/prediction/IndividualLocations.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/prediction/fast/GhostPredictionsFast.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/prediction/fast/GhostPredictionsFast.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/prediction/fast/IndividualLocationsFast.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/prediction/fast/IndividualLocationsFast.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,6 +51,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
@@ -87,6 +117,10 @@
       <workItem from="1571591631948" duration="139000" />
       <workItem from="1571596290153" duration="1667000" />
       <workItem from="1575263982477" duration="27000" />
+      <workItem from="1575266169084" duration="5776000" />
+      <workItem from="1575296929339" duration="6481000" />
+      <workItem from="1575362686073" duration="1517000" />
+      <workItem from="1575369055416" duration="1545000" />
     </task>
     <servers />
   </component>
