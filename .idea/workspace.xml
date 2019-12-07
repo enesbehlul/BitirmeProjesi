@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Blinky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Blinky.java" afterDir="false" />
@@ -11,37 +10,19 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Sue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Sue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Blinky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Blinky.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Inky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Inky.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Pinky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Pinky.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Sue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Sue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterGhost/POGhost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterGhost/POGhost.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterGhostComm/POCommGhost.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterGhostComm/POCommGhost.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterISMCTS/ISNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterISMCTS/ISNode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterISMCTS/InformationSetMCTSPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterISMCTS/InformationSetMCTSPacMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/LocEvalPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/LocEvalPacMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/NNTrainer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/NNTrainer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/NeuralNet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/NeuralNet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/Neuron.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/Neuron.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/NeuronLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/NeuronLayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/NNLocPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/NNLocPacMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/NNPacMan$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/NNPacMan$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/NNPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/NNPacMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/SimpleNNLocPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterNNPacMan/examples/SimpleNNLocPacMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterPacMan/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterPacMan/MyPacMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/StarterPacManOneJunction/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/StarterPacManOneJunction/MyPacMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/demo/DemoPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/examples/demo/DemoPacMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/prediction/GhostPredictions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/prediction/GhostPredictions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/prediction/IndividualLocations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/prediction/IndividualLocations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/prediction/fast/GhostPredictionsFast.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/prediction/fast/GhostPredictionsFast.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/prediction/fast/IndividualLocationsFast.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/prediction/fast/IndividualLocationsFast.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -120,7 +101,12 @@
       <workItem from="1575266169084" duration="5776000" />
       <workItem from="1575296929339" duration="6481000" />
       <workItem from="1575362686073" duration="1517000" />
-      <workItem from="1575369055416" duration="1545000" />
+      <workItem from="1575369055416" duration="3361000" />
+      <workItem from="1575658366918" duration="1710000" />
+      <workItem from="1575701520869" duration="128000" />
+      <workItem from="1575709338534" duration="2495000" />
+      <workItem from="1575736208246" duration="27000" />
+      <workItem from="1575736253011" duration="3982000" />
     </task>
     <servers />
   </component>

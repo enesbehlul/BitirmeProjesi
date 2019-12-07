@@ -51,4 +51,10 @@ public class MyPacMan extends PacmanController {
         return MOVE.values()[random];
 
     }
+    private boolean a(){
+        return true;
+    }
+    private Boolean b(){
+        return true;
+    }
 }

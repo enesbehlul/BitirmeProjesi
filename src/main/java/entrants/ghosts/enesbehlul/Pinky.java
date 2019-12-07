@@ -7,7 +7,7 @@ import pacman.game.Game;
 /**
  * Created by Piers on 11/11/2015.
  */
-public class Pinky extends IndividualGhostController {
+public class Pinky extends GhostCommunication {
 
     static int currentGhostLocation, pacmanLocation;
 
@@ -15,7 +15,7 @@ public class Pinky extends IndividualGhostController {
         super(Constants.GHOST.PINKY);
     }
 
-    @Override
+    /*@Override
     public Constants.MOVE getMove(Game game, long timeDue) {
         currentGhostLocation = game.getGhostCurrentNodeIndex(Constants.GHOST.PINKY);
         pacmanLocation = game.getPacmanCurrentNodeIndex();
@@ -29,5 +29,5 @@ public class Pinky extends IndividualGhostController {
         }
         else
             return Constants.MOVE.LEFT;
-    }
+    }*/
 }
