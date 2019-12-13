@@ -4,18 +4,26 @@
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Blinky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Blinky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/GhostCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/GhostCommunication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Inky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Inky.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Pinky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Pinky.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Sue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Sue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/GhostCommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/GhostCommunication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Inky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Inky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Pinky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Pinky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Sue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Sue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="starter" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -107,6 +115,13 @@
       <workItem from="1575709338534" duration="2495000" />
       <workItem from="1575736208246" duration="27000" />
       <workItem from="1575736253011" duration="3982000" />
+      <workItem from="1575833792500" duration="4217000" />
+      <workItem from="1575971726840" duration="3050000" />
+      <workItem from="1576014262640" duration="1759000" />
+      <workItem from="1576041712614" duration="2859000" />
+      <workItem from="1576159646941" duration="4050000" />
+      <workItem from="1576235553156" duration="4160000" />
+      <workItem from="1576260919245" duration="4995000" />
     </task>
     <servers />
   </component>
@@ -125,5 +140,21 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

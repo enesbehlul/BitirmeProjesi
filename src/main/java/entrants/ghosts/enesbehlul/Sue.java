@@ -9,7 +9,7 @@ import pacman.game.Game;
  */
 public class Sue extends GhostCommunication {
 
-    static int currentGhostLocation, pacmanLocation;
+    //static int currentGhostLocation, pacmanLocation;
 
     public Sue() {
         super(Constants.GHOST.SUE);

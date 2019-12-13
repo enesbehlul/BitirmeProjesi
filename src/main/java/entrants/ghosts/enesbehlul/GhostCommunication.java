@@ -9,7 +9,7 @@ import pacman.game.comms.Messenger;
 
 public class GhostCommunication extends IndividualGhostController {
 
-    private int lastPacmanLocation;
+    private static int lastPacmanLocation;
     private int pacmanLocation;
     private boolean pacmanSeen;
     Messenger messenger;
@@ -22,28 +22,34 @@ public class GhostCommunication extends IndividualGhostController {
     @Override
     public Constants.MOVE getMove(Game game, long timeDue) {
         pacmanLocation = game.getPacmanCurrentNodeIndex();
-
+        if (game.getGhostCurrentNodeIndex(ghost) == lastPacmanLocation){
+            lastPacmanLocation = 0;
+        }
+        //System.out.println("pacman last loc "+ghost+" "+lastPacmanLocation);
         if (pacmanLocation != -1){
             lastPacmanLocation = pacmanLocation;
             pacmanSeen = true;
             messenger = game.getMessenger();
+            tickSeen = game.getCurrentLevelTime();
+            messenger.addMessage(new BasicMessage(ghost,null, BasicMessage.MessageType.PACMAN_SEEN, lastPacmanLocation, tickSeen));
         } else {
             //lastPacmanLocation = -1;
             pacmanSeen = false;
         }
-        if (pacmanSeen){
-            tickSeen = game.getCurrentLevelTime();
-            messenger.addMessage(new BasicMessage(ghost,null, BasicMessage.MessageType.PACMAN_SEEN, lastPacmanLocation, tickSeen));
-        }
 
+        //eger pacmani gormuyorsam, goren arkadasim mesaj gondermis mi
         if (!pacmanSeen && messenger != null){
             for(Message message : messenger.getMessages(ghost)){
-                if (message.getType() == BasicMessage.MessageType.PACMAN_SEEN){
-                    System.out.println("Haberini aldim kardesim, simdi pacmani dovmeye gidiyorum.");
-                    return game.getApproximateNextMoveTowardsTarget(game.getGhostCurrentNodeIndex(ghost),lastPacmanLocation, game.getGhostLastMoveMade(ghost), Constants.DM.PATH);
+                if (message.getType() == BasicMessage.MessageType.PACMAN_SEEN ){
+                    System.out.println(message.getSender() + "goruldu.");
+                    lastPacmanLocation = message.getData();
                 }
             }
+            if (lastPacmanLocation != 0)
+                return game.getApproximateNextMoveTowardsTarget(game.getGhostCurrentNodeIndex(ghost),lastPacmanLocation, game.getGhostLastMoveMade(ghost), Constants.DM.PATH);
         }
+        if (lastPacmanLocation != 0)
+            return game.getApproximateNextMoveTowardsTarget(game.getGhostCurrentNodeIndex(ghost),lastPacmanLocation, game.getGhostLastMoveMade(ghost), Constants.DM.PATH);
         return null;
     }
 }
