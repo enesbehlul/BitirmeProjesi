@@ -13,11 +13,7 @@ public class MyPacMan1 extends PacmanController {
 
     @Override
     public Constants.MOVE getMove(Game game, long timeDue) {
-        pacmanLocation = 1028;
-        for (Constants.MOVE move : game.getPossibleMoves(pacmanLocation)){
-            System.out.println(move);
-        }
-        System.out.println("********************************************");
+        game.wasPillEaten();
         return null;
     }
 }

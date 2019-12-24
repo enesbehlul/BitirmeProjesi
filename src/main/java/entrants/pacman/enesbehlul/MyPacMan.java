@@ -17,7 +17,7 @@ import java.util.Random;
  */
 public class MyPacMan extends PacmanController {
     private MOVE myMove = Constants.MOVE.NEUTRAL;
-    static int current, temp,random, MIN_DISTANCE = 30, counter = 0;
+    static int current, temp,random, MIN_DISTANCE = 20, counter = 0;
     static int targetPill, activeTargetPill, ghostLocation;
 
     boolean isInclude(int[] list, int element){
