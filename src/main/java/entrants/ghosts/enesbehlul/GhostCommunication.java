@@ -23,9 +23,9 @@ public class GhostCommunication extends IndividualGhostController {
     public Constants.MOVE getMove(Game game, long timeDue) {
         pacmanLocation = game.getPacmanCurrentNodeIndex();
         if (game.getGhostCurrentNodeIndex(ghost) == lastPacmanLocation){
-            lastPacmanLocation = 0;
+            lastPacmanLocation = -1;
         }
-        //System.out.println("pacman last loc "+ghost+" "+lastPacmanLocation);
+        //System.out.println("pacman last loc " + ghost + " " + lastPacmanLocation);
         if (pacmanLocation != -1){
             lastPacmanLocation = pacmanLocation;
             pacmanSeen = true;
@@ -41,15 +41,15 @@ public class GhostCommunication extends IndividualGhostController {
         if (!pacmanSeen && messenger != null){
             for(Message message : messenger.getMessages(ghost)){
                 if (message.getType() == BasicMessage.MessageType.PACMAN_SEEN ){
-                    System.out.println(message.getSender() + "goruldu.");
+                    //System.out.println(message.getSender() + "goruldu.");
                     lastPacmanLocation = message.getData();
                 }
             }
-            if (lastPacmanLocation != 0)
+            if (lastPacmanLocation != 0 && lastPacmanLocation != -1)
                 return game.getApproximateNextMoveTowardsTarget(game.getGhostCurrentNodeIndex(ghost),lastPacmanLocation, game.getGhostLastMoveMade(ghost), Constants.DM.PATH);
         }
-        if (lastPacmanLocation != 0)
+        if (lastPacmanLocation != 0 && lastPacmanLocation != -1)
             return game.getApproximateNextMoveTowardsTarget(game.getGhostCurrentNodeIndex(ghost),lastPacmanLocation, game.getGhostLastMoveMade(ghost), Constants.DM.PATH);
-        return null;
+        return Constants.MOVE.UP;
     }
 }

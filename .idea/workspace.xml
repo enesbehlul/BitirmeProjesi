@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GANTT CHART.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/GANTT CHART.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MsPacManBitirmeTeziSon.docx" beforeDir="false" afterPath="$PROJECT_DIR$/MsPacManBitirmeTeziSon.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/GhostCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/GhostCommunication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/GhostCommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/GhostCommunication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,13 +34,16 @@
   </component>
   <component name="ProjectId" id="1Rdw3xZEqqrR8uGNKZdJJs0Zxdh" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MsPacmanVs.Ghosts" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -115,6 +126,32 @@
       <workItem from="1576425224560" duration="1931000" />
       <workItem from="1576575164574" duration="3224000" />
       <workItem from="1577269345842" duration="989000" />
+      <workItem from="1577859759773" duration="3179000" />
+      <workItem from="1578042683196" duration="971000" />
+      <workItem from="1578583333467" duration="1574000" />
+      <workItem from="1578598553571" duration="929000" />
+      <workItem from="1578637438618" duration="1559000" />
+      <workItem from="1583783065883" duration="1077000" />
+      <workItem from="1583865678024" duration="1404000" />
+      <workItem from="1583947088972" duration="4954000" />
+      <workItem from="1583993129721" duration="2021000" />
+      <workItem from="1584205274946" duration="3704000" />
+      <workItem from="1584259450484" duration="73000" />
+      <workItem from="1584259544596" duration="73000" />
+      <workItem from="1584647322332" duration="611000" />
+      <workItem from="1584954542809" duration="1606000" />
+      <workItem from="1585040328851" duration="4660000" />
+      <workItem from="1585088470603" duration="3263000" />
+      <workItem from="1585682748498" duration="423000" />
+      <workItem from="1585685375032" duration="222000" />
+      <workItem from="1585733025144" duration="1439000" />
+      <workItem from="1585837867353" duration="5232000" />
+      <workItem from="1585988417912" duration="8304000" />
+      <workItem from="1586023029065" duration="676000" />
+      <workItem from="1586025409498" duration="753000" />
+      <workItem from="1586073090793" duration="1541000" />
+      <workItem from="1586272629112" duration="5621000" />
+      <workItem from="1586426565273" duration="2670000" />
     </task>
     <servers />
   </component>

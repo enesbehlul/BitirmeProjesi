@@ -1,0 +1,19 @@
+https://code2flow.com/app
+if(Hayalet var mı?){
+  if(Yenilebilir durumda mı?){
+    YE
+  }
+  else{
+    KAÇ
+  }
+} else{
+  if(Pil var mı?){
+    YE
+  } else{
+    if(Bir dönüm noktasında mıyım?){
+      Rastgele dön
+    } else{
+      Aynı yönde ilerle
+    }
+  }
+}
