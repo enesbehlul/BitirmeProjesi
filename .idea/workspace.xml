@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GANTT CHART.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/GANTT CHART.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MsPacManBitirmeTeziSon.docx" beforeDir="false" afterPath="$PROJECT_DIR$/MsPacManBitirmeTeziSon.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/GhostCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/GhostCommunication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameInformations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/gameInformations.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/GhostCommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/GhostCommunication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/starter.kotlin_module" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +26,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Rdw3xZEqqrR8uGNKZdJJs0Zxdh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -44,18 +41,6 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -152,23 +137,47 @@
       <workItem from="1586073090793" duration="1541000" />
       <workItem from="1586272629112" duration="5621000" />
       <workItem from="1586426565273" duration="2670000" />
+      <workItem from="1586770461851" duration="592000" />
+      <workItem from="1586771369708" duration="642000" />
+      <workItem from="1586782192193" duration="4595000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="685" y="293" width="431" height="274" key="#Notifications" timestamp="1586782208653">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="685" y="293" width="431" height="274" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1586782208653" />
+    <state width="1557" height="123" key="GridCell.Tab.0.bottom" timestamp="1586793795117">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="123" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1586793795117" />
+    <state width="1557" height="123" key="GridCell.Tab.0.center" timestamp="1586793795117">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="123" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1586793795117" />
+    <state width="1557" height="123" key="GridCell.Tab.0.left" timestamp="1586793795117">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="123" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1586793795117" />
+    <state width="1557" height="123" key="GridCell.Tab.0.right" timestamp="1586793795117">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1557" height="123" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1586793795117" />
   </component>
 </project>

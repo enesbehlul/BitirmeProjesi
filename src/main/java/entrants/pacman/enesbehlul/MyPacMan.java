@@ -27,6 +27,7 @@ public class MyPacMan extends PacmanController {
     static int lastGhostSeenLoc;
     static int MIN_DISTANCE = 50;
     static int closestGhostDistance;
+    static int closestGhostLocation;
     static int targetPill;
     static int activeTargetPill;
     static int ghostLocation;
@@ -47,23 +48,32 @@ public class MyPacMan extends PacmanController {
     }
 
     private MOVE getEscapingMoveFromGhosts(Game game){
-        //closestGhostDistance = Integer.MAX_VALUE;
+        /*
+        * 1. Buraya duzenleme olarak, birden fazla hayalet tarafindan kovalaniyorsak,
+        * en yakin olanindan kacma komutu eklenebilir.(EKLENDI)*/
+
+        closestGhostLocation = -1;
+        closestGhostDistance = Integer.MAX_VALUE;
         for (Constants.GHOST ghost : Constants.GHOST.values()) {
             // If can't see these will be -1 so all fine there
             if (game.getGhostEdibleTime(ghost) == 0 && game.getGhostLairTime(ghost) == 0) {
                 ghostLocation = game.getGhostCurrentNodeIndex(ghost);
                 if (ghostLocation != -1) {
-                    /*if (game.getShortestPathDistance(current, ghostLocation) < closestGhostDistance){
+                    if (game.getShortestPathDistance(current, ghostLocation) < closestGhostDistance){
                         closestGhostDistance = game.getShortestPathDistance(current, ghostLocation);
-                    }*/
-                    if (game.getShortestPathDistance(current, ghostLocation) < MIN_DISTANCE) {
-                        System.out.println("haylt: " + ghostLocation + " Hayaletten kaciliyor. ");
-                        temp = current;
-                        return game.getNextMoveAwayFromTarget(current, ghostLocation, Constants.DM.PATH);
+                        closestGhostLocation = game.getGhostCurrentNodeIndex(ghost);
                     }
                 }
             }
         }
+        if (closestGhostLocation != -1){
+            if (game.getShortestPathDistance(current, ghostLocation) < MIN_DISTANCE) {
+                System.out.println("haylt: " + ghostLocation + " Hayaletten kaciliyor. ");
+                temp = current;
+                return game.getNextMoveAwayFromTarget(current, ghostLocation, Constants.DM.PATH);
+            }
+        }
+
         return null;
     }
 
@@ -104,6 +114,10 @@ public class MyPacMan extends PacmanController {
     private int getClosestUnvisitedLocation(Game game){
         closestPillDistance = Integer.MAX_VALUE;
         //pil ve hayalet gorunmuyor oyleyse daha once gitmedigin konumlara git
+        /*
+        * Buraya duzenleme olarak, getPillIndices dizisinde en son bakilan indisten baslatabiliris
+        * bu sayede her seferinde onceki indisler kontrol edilmemis olur
+        * */
         for (int pillLocation : game.getPillIndices()) {
             if (!visitedLocations.contains(pillLocation)){
                 if (closestPillDistance > game.getShortestPathDistance(current, pillLocation)){
@@ -123,6 +137,9 @@ public class MyPacMan extends PacmanController {
             levelTimes[0] = game.getTotalTime();
             currentLevel++;
             System.out.println("yeni level'a gecildi");
+            visitedLocations.clear();
+            System.out.println("Ziyaret edilen konumlar dizisi sifirlandi.");
+            saveGameInformation(game);
         }
         else if (currentLevel != game.getCurrentLevel() && game.getCurrentLevel() != 3){
             levelScore = game.getScore() - levelScores[0] - levelScores[1] - levelScores[2];
@@ -159,14 +176,14 @@ public class MyPacMan extends PacmanController {
 
     public MOVE getMove(Game game, long timeDue) {
         //Place your game logic here to play the game as Ms Pac-Man
-        if (game.gameOver()){
-            System.out.println("OYUN BİTTİ");
+        if (game.getPacmanNumberOfLivesRemaining() < 2){
+            game.updateGame(false,false,true,false,false);
         }
+
         checkState(game);
 
         current = game.getPacmanCurrentNodeIndex();
         visitedLocations.add(current);
-        //closestGhostDistance = Integer.MAX_VALUE;
 
         System.out.println("pacman: "+current);
 
