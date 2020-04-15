@@ -3,9 +3,47 @@
   <component name="ChangeListManager">
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GANTT CHART.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameSinifiAciklama.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makaleler/Fast_Approximate_Max-n_Monte_Carlo_Tree_Search_for.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makaleler/MCTSPacmanTCIAIG.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makaleler/Monte carlo/MonteCarloGameNode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makaleler/Monte carlo/MonteCarloTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makaleler/Monte carlo/MyPacMan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makaleler/Monte carlo/Ucb1SelectionPolicy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makaleler/Monte carlo/evaluators/DistanceToOpportunityEvaluator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makaleler/Monte carlo/evaluators/ITreeEvaluator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makaleler/Monte carlo/evaluators/LongRangePlanningEvaluator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makaleler/Monte carlo/evaluators/PowerPillActiveEvaluator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makaleler/Monte carlo/evaluators/RuleBasedEvaluator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makaleler/paper7.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MsPacManBitirmeTeziFormatliNihai.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MsPacManBitirmeTeziFormatliNihai.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MsPacManBitirmeTeziSon.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MsPacManBitirmeTeziSon.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PACMAN_LEVEL_3.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PO.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pacman.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PacmanAkisDiagrami.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PacmanLevel2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bizimHayaletlerBizimPacmanBitirmeSunumuLevel2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bizimHayaletlerDefaultPacman.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/defaultPacmanDefaultHayaletler.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/defaultPacmanDefaultHayaletlerIletisimsiz.PNG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/gameInformations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/gameInformations.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hayaletlerAlgoritma.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pacmanCodeFlow.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pacmanKuralTabanliPseudo.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pacmanPillerBitiyor.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pacmanPillerBitiyor2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pacmanPsudo.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pacmanimizDefaultHayaletlereKarsi.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pacmanimizDefaultHayaletlereKarsi2.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pseudo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/starter.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +178,11 @@
       <workItem from="1586770461851" duration="592000" />
       <workItem from="1586771369708" duration="642000" />
       <workItem from="1586782192193" duration="4595000" />
+      <workItem from="1586796148212" duration="103000" />
+      <workItem from="1586796265689" duration="449000" />
+      <workItem from="1586889306500" duration="1889000" />
+      <workItem from="1586956398706" duration="1777000" />
+      <workItem from="1586965863880" duration="2928000" />
     </task>
     <servers />
   </component>
@@ -159,25 +202,33 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="685" y="293" width="431" height="274" key="#Notifications" timestamp="1586782208653">
+    <state x="685" y="293" width="431" height="274" key="#Notifications" timestamp="1586796156524">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="685" y="293" width="431" height="274" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1586782208653" />
-    <state width="1557" height="123" key="GridCell.Tab.0.bottom" timestamp="1586793795117">
+    <state x="685" y="293" width="431" height="274" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1586796156524" />
+    <state width="778" height="150" key="GridCell.Tab.0.bottom" timestamp="1586972533490">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="123" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1586793795117" />
-    <state width="1557" height="123" key="GridCell.Tab.0.center" timestamp="1586793795117">
+    <state width="778" height="150" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1586972533490" />
+    <state width="778" height="150" key="GridCell.Tab.0.center" timestamp="1586972533490">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="123" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1586793795117" />
-    <state width="1557" height="123" key="GridCell.Tab.0.left" timestamp="1586793795117">
+    <state width="778" height="150" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1586972533490" />
+    <state width="778" height="150" key="GridCell.Tab.0.left" timestamp="1586972533490">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="123" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1586793795117" />
-    <state width="1557" height="123" key="GridCell.Tab.0.right" timestamp="1586793795117">
+    <state width="778" height="150" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1586972533490" />
+    <state width="778" height="150" key="GridCell.Tab.0.right" timestamp="1586972533490">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="123" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1586793795117" />
+    <state width="778" height="150" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1586972533490" />
+    <state x="301" y="75" key="SettingsEditor" timestamp="1586796249266">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="301" y="75" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1586796249266" />
+    <state x="456" y="195" key="run.anything.popup" timestamp="1586968317353">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1586968317353" />
   </component>
 </project>
