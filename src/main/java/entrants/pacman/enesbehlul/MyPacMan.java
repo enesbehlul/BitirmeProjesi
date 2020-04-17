@@ -71,6 +71,7 @@ public class MyPacMan extends PacmanController {
             if (game.getGhostEdibleTime(ghost) == 0 && game.getGhostLairTime(ghost) == 0) {
                 ghostLocation = game.getGhostCurrentNodeIndex(ghost);
                 if (ghostLocation != -1) {
+                    System.out.println(getNodePositionByPacman(current, ghostLocation));
                     if (game.getShortestPathDistance(current, ghostLocation) < closestGhostDistance){
                         closestGhostDistance = game.getShortestPathDistance(current, ghostLocation);
                         closestGhostLocation = game.getGhostCurrentNodeIndex(ghost);
@@ -100,6 +101,70 @@ public class MyPacMan extends PacmanController {
         return closestGhostLocation;
     }
 
+    private int getDigitCountOfAnInteger(int number){
+        if (number < 100) {
+            if (number < 10) {
+                return 1;
+            } else {
+                return 2;
+            }
+        } else {
+            if (number < 1000) {
+                return 3;
+            } else {
+                // haritada 2000'den buyuk bir konum olmadigi icin
+                // 1000'den buyuk her konum 4 basamaklidir.
+                if (number < 2000) {
+                    return 4;
+                }
+            }
+        }
+        return -1;
+    }
+
+    private int[] splitIntegerIntoTwoHalfs(int number){
+        int[] digits = new int[6];
+        for (int i = 0; i < 4; i++) {
+            digits[i] =  number % 10;
+            number = number / 10;
+        }
+        // gelen sayiyi ortadan ikiye boluyor
+        // ornegin 1204 -> 12 ve 04 olarak
+        // 12 dikey 04 ise yatay kontrol icin
+        digits[4] = digits[3]*10 + digits[2];
+        digits[5] = digits[1]*10 + digits[0];
+        return digits;
+    }
+
+    private String getNodePositionByPacman(int pacmanLocation, int ghostLocation){
+        if (ghostLocation == -1){
+            return null;
+        }
+        int[] pacmanDigits = splitIntegerIntoTwoHalfs(pacmanLocation);
+        int[] ghostDigits = splitIntegerIntoTwoHalfs(ghostLocation);
+
+        // bu durumda hayalet haritada pacman'e gore daha yukarı bir konumdadır
+        if (pacmanDigits[4] > ghostDigits[4]){
+            return new String("Hayalet yukarida");
+        } else if (pacmanDigits[4] < ghostDigits[4]){
+            return new String("Hayalet asagida");
+        }
+        // bu durumda pacman daha sagdadir
+        // or: 88 > 76
+        else if (pacmanDigits[5] > ghostDigits[5]){
+            return new String("Hayalet solda");
+        }
+        // hayalet daha soldadır
+        else if (pacmanDigits[5] < ghostDigits[5]){
+            return new String("Hayalet sagda");
+        }
+
+        return null;
+    }
+
+    private void newEscapingMoveFromGhost(Game game){
+
+    }
     private MOVE getEscapingMoveFromGhosts(Game game){
         /*
         * 1. Buraya duzenleme olarak, birden fazla hayalet tarafindan kovalaniyorsak,
@@ -237,7 +302,7 @@ public class MyPacMan extends PacmanController {
                 //gorus alanindaki pillerden en yakin olanini bul
 
                 activeTargetPill = getClosestActivePillIndice(game);
-                System.out.println("target pill " + activeTargetPill);
+                //System.out.println("target pill " + activeTargetPill);
 
                 /*
                  * BURASI GELISTIRILECEK
@@ -262,16 +327,17 @@ public class MyPacMan extends PacmanController {
                 }*/
                 if (activeTargetPill == -1){
                     activeTargetPill = getClosestUnvisitedLocation(game);
+                    System.out.println("target: " + activeTargetPill);
                 }
 
-                System.out.println("target: " + activeTargetPill);
+
                 temp = current;
-                return game.getNextMoveTowardsTarget(current, activeTargetPill, game.getPacmanLastMoveMade(), Constants.DM.MANHATTAN);
+                return game.getNextMoveTowardsTarget(current, activeTargetPill, game.getPacmanLastMoveMade(), Constants.DM.PATH);
             } catch (ArrayIndexOutOfBoundsException e){
                 System.out.println("gorunurde pil yok");
                 int pillLocation = getClosestUnvisitedLocation(game);
                 temp = current;
-                return game.getNextMoveTowardsTarget(current, pillLocation, game.getPacmanLastMoveMade(), Constants.DM.MANHATTAN);
+                return game.getNextMoveTowardsTarget(current, pillLocation, game.getPacmanLastMoveMade(), Constants.DM.PATH);
             }
         }
     }
