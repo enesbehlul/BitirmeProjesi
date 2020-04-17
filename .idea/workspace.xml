@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameInformations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/gameInformations.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
     </list>
@@ -147,6 +146,7 @@
       <workItem from="1586965863880" duration="2928000" />
       <workItem from="1587023587933" duration="3217000" />
       <workItem from="1587123057806" duration="10208000" />
+      <workItem from="1587146089246" duration="2803000" />
     </task>
     <servers />
   </component>
@@ -170,38 +170,38 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="685" y="293" width="431" height="274" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1586796156524" />
-    <state width="565" height="276" key="GridCell.Tab.0.bottom" timestamp="1587142295266">
+    <state width="777" height="149" key="GridCell.Tab.0.bottom" timestamp="1587148913274">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="565" height="276" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587142295266" />
-    <state width="565" height="276" key="GridCell.Tab.0.center" timestamp="1587142295266">
+    <state width="777" height="149" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587148913274" />
+    <state width="777" height="149" key="GridCell.Tab.0.center" timestamp="1587148913274">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="565" height="276" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587142295266" />
-    <state width="565" height="276" key="GridCell.Tab.0.left" timestamp="1587142295266">
+    <state width="777" height="149" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587148913274" />
+    <state width="777" height="149" key="GridCell.Tab.0.left" timestamp="1587148913274">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="565" height="276" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587142295266" />
-    <state width="565" height="276" key="GridCell.Tab.0.right" timestamp="1587142295266">
+    <state width="777" height="149" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587148913274" />
+    <state width="777" height="149" key="GridCell.Tab.0.right" timestamp="1587148913274">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="565" height="276" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587142295266" />
-    <state width="565" height="276" key="GridCell.Tab.1.bottom" timestamp="1587142295266">
+    <state width="777" height="149" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587148913274" />
+    <state width="902" height="268" key="GridCell.Tab.1.bottom" timestamp="1587148913259">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="565" height="276" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587142295266" />
-    <state width="565" height="276" key="GridCell.Tab.1.center" timestamp="1587142295266">
+    <state width="902" height="268" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587148913259" />
+    <state width="902" height="268" key="GridCell.Tab.1.center" timestamp="1587148913259">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="565" height="276" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1587142295266" />
-    <state width="565" height="276" key="GridCell.Tab.1.left" timestamp="1587142295266">
+    <state width="902" height="268" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1587148913259" />
+    <state width="902" height="268" key="GridCell.Tab.1.left" timestamp="1587148913259">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="565" height="276" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1587142295266" />
-    <state width="565" height="276" key="GridCell.Tab.1.right" timestamp="1587142295266">
+    <state width="902" height="268" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1587148913259" />
+    <state width="902" height="268" key="GridCell.Tab.1.right" timestamp="1587148913259">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="565" height="276" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1587142295266" />
+    <state width="902" height="268" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1587148913259" />
     <state x="301" y="75" key="SettingsEditor" timestamp="1586796249266">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -216,8 +216,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java</url>
-          <line>139</line>
+          <line>143</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java</url>
+          <line>331</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

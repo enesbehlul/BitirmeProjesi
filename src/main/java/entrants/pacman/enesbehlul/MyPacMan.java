@@ -41,6 +41,10 @@ public class MyPacMan extends PacmanController {
 
     int powerPillWaitingCounter = 0;
 
+    // bu dizi yukari[0], asagi[1], sag[2] ve sol[3] yonlerde
+    // hayalet var mi bilgisi tutacak
+    boolean[] dangerousDirections = new boolean[4];
+
     Set<Integer> visitedLocations = new HashSet<Integer>();
 
     private MOVE getRandomMove(MOVE[] possibleMoves){
@@ -145,25 +149,68 @@ public class MyPacMan extends PacmanController {
 
         // bu durumda hayalet haritada pacman'e gore daha yukarı bir konumdadır
         if (pacmanDigits[4] > ghostDigits[4]){
+            dangerousDirections[0] = true;
             return new String("Hayalet yukarida");
         } else if (pacmanDigits[4] < ghostDigits[4]){
+            dangerousDirections[1] = true;
             return new String("Hayalet asagida");
         }
-        // bu durumda pacman daha sagdadir
-        // or: 88 > 76
-        else if (pacmanDigits[5] > ghostDigits[5]){
-            return new String("Hayalet solda");
-        }
-        // hayalet daha soldadır
+        // hayalet daha sagda
         else if (pacmanDigits[5] < ghostDigits[5]){
+            dangerousDirections[2] = true;
             return new String("Hayalet sagda");
         }
-
+        // bu durumda hayalet daha soldadir
+        // or: pacman: 88 > 76 : ghost
+        else if (pacmanDigits[5] > ghostDigits[5]){
+            dangerousDirections[3] = true;
+            return new String("Hayalet solda");
+        }
         return null;
     }
 
-    private void newEscapingMoveFromGhost(Game game){
+    private void resetDangereousDirections(){
+        for (int i = 0; i < dangerousDirections.length; i++){
+            dangerousDirections[i] = false;
+        }
+    }
 
+    private MOVE getNewEscapingMoveFromGhosts(Game game){
+        // tehlikeli yonleri sifirliyoruz ki yeni adimda
+        // eski sonuclara gore hareket etmeyelim
+        resetDangereousDirections();
+
+        for (Constants.GHOST ghost : Constants.GHOST.values()) {
+            if (game.getGhostEdibleTime(ghost) == 0 && game.getGhostLairTime(ghost) == 0) {
+                ghostLocation = game.getGhostCurrentNodeIndex(ghost);
+                if (ghostLocation != -1) {
+                    // burada hayaletlerin pacman'e gore konumlari
+                    // dangereousDirections dizisine aktariliyor
+                    System.out.println(getNodePositionByPacman(current, ghostLocation));
+
+                    for (int i = 0; i < game.getPossibleMoves(current).length; i++){
+                        // eger yukari cikabiliyorsak ve yukarisi tehlikeli degilse
+                        if (game.getPossibleMoves(current)[i].equals(MOVE.UP) && !dangerousDirections[0]){
+                            return MOVE.UP;
+                        }
+                        if (game.getPossibleMoves(current)[i].equals(MOVE.DOWN) && !dangerousDirections[1]){
+                            return MOVE.DOWN;
+                        }
+                        if (game.getPossibleMoves(current)[i].equals(MOVE.RIGHT) && !dangerousDirections[2]){
+                            return MOVE.RIGHT;
+                        }
+                        if (game.getPossibleMoves(current)[i].equals(MOVE.LEFT) && !dangerousDirections[3]){
+                            return MOVE.LEFT;
+                        }
+                    }
+
+                }
+            }
+        }
+        // pacman'in bulundugu konumda yapabilecegi(possibleMoves) hareketler ile
+        // hayaletlerin pacman'e gore bulundugu yonleri(dangereousDirections) kiyaslayacagiz
+
+        return null;
     }
     private MOVE getEscapingMoveFromGhosts(Game game){
         /*
@@ -279,7 +326,7 @@ public class MyPacMan extends PacmanController {
 
         System.out.println("pacman: "+current);
 
-        escapingMove = getEscapingMoveFromGhosts(game);
+        escapingMove = getNewEscapingMoveFromGhosts(game);
         if (escapingMove != null){
             temp = current;
             return escapingMove;
