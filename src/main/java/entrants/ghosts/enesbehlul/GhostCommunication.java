@@ -21,6 +21,7 @@ public class GhostCommunication extends IndividualGhostController {
 
     @Override
     public Constants.MOVE getMove(Game game, long timeDue) {
+
         pacmanLocation = game.getPacmanCurrentNodeIndex();
         if (game.getGhostCurrentNodeIndex(ghost) == lastPacmanLocation){
             lastPacmanLocation = -1;

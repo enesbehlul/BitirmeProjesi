@@ -1,11 +1,11 @@
 
 //import entrants.ghosts.enesbehlul.Blinky;
-import examples.StarterGhostComm.Blinky;
+import examples.StarterGhost.Blinky;
 //import entrants.ghosts.enesbehlul.Inky;
-import examples.StarterGhostComm.Inky;
+import examples.StarterGhost.Inky;
 //import entrants.ghosts.enesbehlul.Pinky;
-import examples.StarterGhostComm.Pinky;
-import examples.StarterGhostComm.Sue;
+import examples.StarterGhost.Pinky;
+import examples.StarterGhost.Sue;
 //import entrants.ghosts.enesbehlul.Sue;
 import entrants.pacman.enesbehlul.MyPacMan;
 //import examples.StarterPacMan.MyPacMan;

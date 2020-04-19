@@ -17,3 +17,24 @@ if(Hayalet var mı?){
     }
   }
 }
+
+
+//ikinci donem
+baslangic:
+if(Kaçılması gereken hayalet var mı){
+  KAÇ;
+  loop baslangic;
+} else{
+  yenilebilirHayalet:
+  if(Yenilebilir hayaletler var mı?){
+    Hayaletleri YE;
+    loop baslangic;
+  }
+  if(Görünürde pil var mı?){
+    YE;
+    loop baslangic;
+  } else{
+    Daha önce gitmediğim bir konuma git;
+    loop baslangic;
+  }
+}
