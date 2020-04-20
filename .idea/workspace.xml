@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/belgeler/MsPacManBitirmeTeziFormatliNihai.docx" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/MsPacManBitirmeTeziFormatliNihai.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/belgeler/~$PacManBitirmeTeziFormatliNihai.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/belgeler/~WRL0005.tmp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +150,7 @@
       <workItem from="1587294631134" duration="2704000" />
       <workItem from="1587339487926" duration="838000" />
       <workItem from="1587379199087" duration="646000" />
+      <workItem from="1587382730074" duration="945000" />
     </task>
     <servers />
   </component>
