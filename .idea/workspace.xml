@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/belgeler/MsPacManBitirmeTeziFormatliNihai.docx" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/MsPacManBitirmeTeziFormatliNihai.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/belgeler/pacmanCodeFlow.txt" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/pacmanCodeFlow.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameInformations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/gameInformations.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/PACMAN_LEVEL_3.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/Pacman.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/PacmanAkisDiagrami.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/PacmanLevel2.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/bizimHayaletlerBizimPacmanBitirmeSunumuLevel2.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/bizimHayaletlerDefaultPacman.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/defaultPacmanDefaultHayaletler.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/defaultPacmanDefaultHayaletlerIletisimsiz.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/hayaletlerAlgoritma.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/pacmanKuralTabanliPseudo.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/pacmanPillerBitiyor.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/pacmanPillerBitiyor2.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/pacmanPsudo.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/pacmanimizDefaultHayaletlereKarsi.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gorseller/pacmanimizDefaultHayaletlereKarsi2.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/GhostCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/GhostCommunication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +146,7 @@
       <workItem from="1587203812970" duration="1632000" />
       <workItem from="1587294631134" duration="2704000" />
       <workItem from="1587339487926" duration="838000" />
+      <workItem from="1587379199087" duration="646000" />
     </task>
     <servers />
   </component>
