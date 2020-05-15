@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 
 
 /*
@@ -38,6 +39,8 @@ public class MyPacMan extends PacmanController {
     static int closestPillLocation;
     static int closestPillDistance;
     int currentLevel = 0;
+
+    long startTime, stopTime, elapsedTime;
 
     int powerPillWaitingCounter = 0;
 
@@ -240,6 +243,7 @@ public class MyPacMan extends PacmanController {
     }
 
     private MOVE getPacmanCatchingMoveForGhosts(Game game){
+
         //en yakindaki hayaleti yemek icin
         closestGhostLocation = getClosestEdibleGhostLocation(game);
 
@@ -310,9 +314,12 @@ public class MyPacMan extends PacmanController {
         }
         if (game.gameOver()){
             saveGameInformation(game);
-            System.out.println("GAME OVER");
+            System.out.println("BITTI");
         }
-
+        if (game.getPacmanNumberOfLivesRemaining() <= 0){
+            saveGameInformation(game);
+            System.out.println("BITTI");
+        }
     }
 
     private void saveGameInformation(Game game){
@@ -327,9 +334,29 @@ public class MyPacMan extends PacmanController {
         }
     }
 
+    public void printMoveMethotExecutionTime(long startTime, long stopTime){
+
+        System.out.print("Toplam sure: ");
+
+        elapsedTime = stopTime - startTime;
+
+        //nanosaniyeden milisaniyeye cevirip yazdiriyoruz.
+        System.out.print(TimeUnit.NANOSECONDS.toMillis(elapsedTime));
+        System.out.print("millisecond and ");
+        System.out.print(elapsedTime);
+        System.out.println("nanosecond.");
+
+
+    }
+
     public MOVE getMove(Game game, long timeDue) {
         //Place your game logic here to play the game as Ms Pac-Man
         checkState(game);
+        startTime = System.nanoTime();
+
+
+        game.getPowerPillIndices();
+        int dizi[] = game.getShortestPath(current, game.getPowerPillIndices()[0]);
 
         current = game.getPacmanCurrentNodeIndex();
         visitedLocations.add(current);
@@ -339,6 +366,8 @@ public class MyPacMan extends PacmanController {
         escapingMove = getNewEscapingMoveFromGhosts(game);
         if (escapingMove != null){
             temp = current;
+            printMoveMethotExecutionTime(startTime, System.nanoTime());
+            checkState(game);
             return escapingMove;
         }
 
@@ -346,12 +375,16 @@ public class MyPacMan extends PacmanController {
 
         if (catchingMove != null){
             temp = current;
+            printMoveMethotExecutionTime(startTime, System.nanoTime());
+            checkState(game);
             return catchingMove;
         }
 
         //eger pacman sabitse(bir onceki konumu ile ayni yerdeyse
         if (current == temp){
             System.out.println("Ayni yerde takilma sorunu");
+            checkState(game);
+            printMoveMethotExecutionTime(startTime, System.nanoTime());
             return getRandomMove(game.getPossibleMoves(current));
         } else {
             try {
@@ -389,11 +422,15 @@ public class MyPacMan extends PacmanController {
 
 
                 temp = current;
+                checkState(game);
+                printMoveMethotExecutionTime(startTime, System.nanoTime());
                 return game.getNextMoveTowardsTarget(current, activeTargetPill, game.getPacmanLastMoveMade(), Constants.DM.MANHATTAN);
             } catch (ArrayIndexOutOfBoundsException e){
                 System.out.println("gorunurde pil yok");
                 int pillLocation = getClosestUnvisitedLocation(game);
                 temp = current;
+                printMoveMethotExecutionTime(startTime, System.nanoTime());
+                checkState(game);
                 return game.getNextMoveTowardsTarget(current, pillLocation, game.getPacmanLastMoveMade(), Constants.DM.MANHATTAN);
             }
         }

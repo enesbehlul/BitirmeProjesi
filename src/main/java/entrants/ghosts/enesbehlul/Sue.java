@@ -4,28 +4,37 @@ import pacman.controllers.IndividualGhostController;
 import pacman.game.Constants;
 import pacman.game.Game;
 
+import java.util.Random;
+
 /**
  * Created by Piers on 11/11/2015.
  */
-public class Sue extends GhostCommunication {
+public class Sue extends IndividualGhostController{
+    GhostCommunication ghostCommunication;
+    static int currentGhostLocation, pacmanLocation;
 
-    //static int currentGhostLocation, pacmanLocation;
-
-    public Sue() {
-        super(Constants.GHOST.SUE);
+    public Sue(Constants.GHOST ghost) {
+        super(ghost);
+        ghostCommunication = new GhostCommunication(Constants.GHOST.SUE);
     }
 
-    /*@Override
+    @Override
     public Constants.MOVE getMove(Game game, long timeDue) {
-        currentGhostLocation = game.getGhostCurrentNodeIndex(Constants.GHOST.SUE);
-        pacmanLocation = game.getPacmanCurrentNodeIndex();
-        if (pacmanLocation != -1)
-            System.out.println(pacmanLocation);
-        if(game.isJunction(currentGhostLocation)){
-            System.out.println("donemec");
-            return game.getNextMoveTowardsTarget(currentGhostLocation, pacmanLocation, Constants.DM.PATH);
+        return ghostCommunication.getMove(game, timeDue);
+    }
+
+    /*public Constants.MOVE getMove(Game game, long timeDue) {
+
+        //pacman ve hayaletin konum bilgilerini atama
+        currentGhostLocation = game.getGhostCurrentNodeIndex(ghost);
+
+        if (game.isJunction(currentGhostLocation)){
+            possibleMoves = game.getPossibleMoves(currentGhostLocation);
+            a = rand.nextInt(possibleMoves.length);
+            System.out.println(possibleMoves[a]);
+            return possibleMoves[a];
+
         }
-        else
-            return null;
+        return null;
     }*/
 }

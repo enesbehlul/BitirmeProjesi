@@ -7,25 +7,18 @@ import pacman.game.Game;
 /**
  * Created by Piers on 11/11/2015.
  */
-public class Inky extends GhostCommunication {
+public class Inky  extends  IndividualGhostController{
 
-    //static int currentGhostLocation, pacmanLocation;
+    GhostCommunication ghostCommunication;
+    static int currentGhostLocation, pacmanLocation;
 
-    public Inky() {
-        super(Constants.GHOST.INKY);
+    public Inky(Constants.GHOST ghost) {
+        super(ghost);
+        ghostCommunication = new GhostCommunication(Constants.GHOST.INKY);
     }
 
-    /*@Override
+    @Override
     public Constants.MOVE getMove(Game game, long timeDue) {
-        currentGhostLocation = game.getGhostCurrentNodeIndex(Constants.GHOST.INKY);
-        pacmanLocation = game.getPacmanCurrentNodeIndex();
-        if (pacmanLocation != -1)
-            System.out.println(pacmanLocation);
-        if(game.isJunction(currentGhostLocation)){
-            System.out.println("donemec");
-            return game.getNextMoveTowardsTarget(currentGhostLocation, pacmanLocation, Constants.DM.PATH);
-        }
-        else
-            return null;
-    }*/
+        return ghostCommunication.getMove(game, timeDue);
+    }
 }

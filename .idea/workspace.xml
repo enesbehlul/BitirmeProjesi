@@ -5,7 +5,23 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/belgeler/MsPacManBitirmeTeziFormatliNihai.docx" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/MsPacManBitirmeTeziFormatliNihai.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/belgeler/~$PacManBitirmeTeziFormatliNihai.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/belgeler/~WRL0005.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameInformations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/gameInformations.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Blinky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Blinky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/GhostCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/GhostCommunication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Inky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Inky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Pinky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Pinky.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Sue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Sue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Blinky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Blinky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/GhostCommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/GhostCommunication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Inky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Inky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Pinky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Pinky.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Sue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Sue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan1.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +48,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MsPacmanVs.Ghosts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MsPacman/starter0-1-7-2-common" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -151,6 +167,21 @@
       <workItem from="1587339487926" duration="838000" />
       <workItem from="1587379199087" duration="646000" />
       <workItem from="1587382730074" duration="945000" />
+      <workItem from="1587737115289" duration="2729000" />
+      <workItem from="1587740123221" duration="3859000" />
+      <workItem from="1587904632131" duration="1253000" />
+      <workItem from="1587907686584" duration="678000" />
+      <workItem from="1587917900920" duration="2460000" />
+      <workItem from="1587927462387" duration="659000" />
+      <workItem from="1588003116836" duration="3809000" />
+      <workItem from="1588010980962" duration="2508000" />
+      <workItem from="1588072104779" duration="2254000" />
+      <workItem from="1588090008003" duration="3244000" />
+      <workItem from="1588175732899" duration="1194000" />
+      <workItem from="1589466650172" duration="251000" />
+      <workItem from="1589467115736" duration="18000" />
+      <workItem from="1589467169470" duration="11876000" />
+      <workItem from="1589542522875" duration="25000" />
     </task>
     <servers />
   </component>
@@ -174,54 +205,74 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="685" y="293" width="431" height="274" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1586796156524" />
-    <state width="756" height="248" key="GridCell.Tab.0.bottom" timestamp="1587340327234">
+    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1588091173685">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="756" height="248" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587340327234" />
-    <state width="756" height="248" key="GridCell.Tab.0.center" timestamp="1587340327234">
+    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1588091173685" />
+    <state x="602" y="149" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1589466659591">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="756" height="248" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587340327234" />
-    <state width="756" height="248" key="GridCell.Tab.0.left" timestamp="1587340327234">
+    <state x="602" y="149" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1600.860@0.0.1600.860" timestamp="1589466659591" />
+    <state x="530" y="177" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1588004240195">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="756" height="248" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587340327234" />
-    <state width="756" height="248" key="GridCell.Tab.0.right" timestamp="1587340327234">
+    <state x="530" y="177" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1600.860@0.0.1600.860" timestamp="1588004240195" />
+    <state x="702" y="168" key="FileChooserDialogImpl" timestamp="1588176324822">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="756" height="248" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587340327234" />
-    <state width="756" height="248" key="GridCell.Tab.1.bottom" timestamp="1587340327234">
+    <state x="702" y="168" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1588176324822" />
+    <state width="773" height="235" key="GridCell.Tab.0.bottom" timestamp="1589484493854">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="756" height="248" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587340327234" />
-    <state width="756" height="248" key="GridCell.Tab.1.center" timestamp="1587340327234">
+    <state width="773" height="235" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1589484493854" />
+    <state width="773" height="235" key="GridCell.Tab.0.center" timestamp="1589484493854">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="756" height="248" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1587340327234" />
-    <state width="756" height="248" key="GridCell.Tab.1.left" timestamp="1587340327234">
+    <state width="773" height="235" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1589484493854" />
+    <state width="773" height="235" key="GridCell.Tab.0.left" timestamp="1589484493854">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="756" height="248" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1587340327234" />
-    <state width="756" height="248" key="GridCell.Tab.1.right" timestamp="1587340327234">
+    <state width="773" height="235" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1589484493854" />
+    <state width="773" height="235" key="GridCell.Tab.0.right" timestamp="1589484493854">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="756" height="248" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1587340327234" />
-    <state x="301" y="75" key="SettingsEditor" timestamp="1586796249266">
+    <state width="773" height="235" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1589484493854" />
+    <state width="1122" height="171" key="GridCell.Tab.1.bottom" timestamp="1589484493840">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="301" y="75" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1586796249266" />
-    <state x="456" y="195" key="run.anything.popup" timestamp="1586968317353">
+    <state width="1122" height="171" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1589484493840" />
+    <state width="1122" height="171" key="GridCell.Tab.1.center" timestamp="1589484493839">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1586968317353" />
+    <state width="1122" height="171" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1589484493839" />
+    <state width="1122" height="171" key="GridCell.Tab.1.left" timestamp="1589484493839">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1122" height="171" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1589484493839" />
+    <state width="1122" height="171" key="GridCell.Tab.1.right" timestamp="1589484493840">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state width="1122" height="171" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1589484493840" />
+    <state x="301" y="9" key="SettingsEditor" timestamp="1589483318175">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="301" y="9" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1589483318175" />
+    <state x="456" y="195" key="run.anything.popup" timestamp="1589468905124">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1589468905124" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1589467783233">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1589467783233" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java</url>
-          <line>146</line>
-          <option name="timeStamp" value="3" />
+          <url>jar://$MAVEN_REPOSITORY$/uk/co/pacmanvghosts/pacman-main/2.0.1.0/pacman-main-2.0.1.0-sources.jar!/pacman/game/Game.java</url>
+          <line>939</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

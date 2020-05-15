@@ -1,16 +1,18 @@
 
-//import entrants.ghosts.enesbehlul.Blinky;
-import examples.StarterGhost.Blinky;
-//import entrants.ghosts.enesbehlul.Inky;
-import examples.StarterGhost.Inky;
-//import entrants.ghosts.enesbehlul.Pinky;
-import examples.StarterGhost.Pinky;
-import examples.StarterGhost.Sue;
-//import entrants.ghosts.enesbehlul.Sue;
-import entrants.pacman.enesbehlul.MyPacMan;
+import entrants.ghosts.enesbehlul.Blinky;
+//import examples.StarterGhost.Blinky;
+import entrants.ghosts.enesbehlul.Inky;
+//import examples.StarterGhost.Inky;
+import entrants.ghosts.enesbehlul.Pinky;
+//import examples.StarterGhost.Pinky;
+//import examples.StarterGhost.Sue;
+import entrants.ghosts.enesbehlul.Sue;
+import entrants.pacman.enesbehlul.*;
+import pacman.controllers.HumanController;
 //import examples.StarterPacMan.MyPacMan;
 import pacman.Executor;
 import pacman.controllers.IndividualGhostController;
+import pacman.controllers.KeyBoardInput;
 import pacman.controllers.MASController;
 import pacman.game.Constants.*;
 
@@ -30,14 +32,20 @@ public class Main {
 
         EnumMap<GHOST, IndividualGhostController> controllers = new EnumMap<>(GHOST.class);
 
-        controllers.put(GHOST.INKY, new Inky());
-        controllers.put(GHOST.BLINKY, new Blinky());
-        controllers.put(GHOST.PINKY, new Pinky());
-        controllers.put(GHOST.SUE, new Sue());
+        controllers.put(GHOST.INKY, new Inky(GHOST.INKY));
+        controllers.put(GHOST.BLINKY, new Blinky(GHOST.BLINKY));
+        controllers.put(GHOST.PINKY, new Pinky(GHOST.PINKY));
+        controllers.put(GHOST.SUE, new Sue(GHOST.SUE));
 
-        executor.runGameTimed(new MyPacMan(), new MASController(controllers));
+        // Pacmani klavyeden yonetebilmek icin
+        //executor.runGameTimed(new HumanController(new KeyBoardInput()), new MASController(controllers));
 
-        
+       for (int i = 0; i<10; i++){
+           executor.runGame(new MyPacMan1(), new MASController(controllers), 1);
+       }
+
+
+
 
     }
 }

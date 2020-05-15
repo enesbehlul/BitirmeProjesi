@@ -7,27 +7,19 @@ import pacman.game.Game;
 /**
  * Created by Piers on 11/11/2015.
  */
-public class Pinky extends GhostCommunication {
+public class Pinky extends IndividualGhostController{
 
-    //static int currentGhostLocation, pacmanLocation;
+    GhostCommunication ghostCommunication;
+    static int currentGhostLocation, pacmanLocation;
 
-    public Pinky() {
-        super(Constants.GHOST.PINKY);
+    public Pinky(Constants.GHOST ghost) {
+        super(ghost);
+        ghostCommunication = new GhostCommunication(Constants.GHOST.PINKY);
     }
 
-    /*@Override
+    @Override
     public Constants.MOVE getMove(Game game, long timeDue) {
-        currentGhostLocation = game.getGhostCurrentNodeIndex(Constants.GHOST.PINKY);
-        pacmanLocation = game.getPacmanCurrentNodeIndex();
-        if (pacmanLocation != -1)
-            System.out.println(pacmanLocation);
-        if(game.isJunction(currentGhostLocation)){
-            System.out.println("donemec");
+        return ghostCommunication.getMove(game, timeDue);
+    }
 
-            return Constants.MOVE.LEFT;
-            //return game.getNextMoveTowardsTarget(currentGhostLocation, pacmanLocation, Constants.DM.PATH);
-        }
-        else
-            return Constants.MOVE.LEFT;
-    }*/
 }

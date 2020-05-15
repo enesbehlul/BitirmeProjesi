@@ -9,48 +9,146 @@ import pacman.game.comms.Messenger;
 
 public class GhostCommunication extends IndividualGhostController {
 
+
+    private static Constants.GHOST[] protectedPowerPill = null;
+    public static int[] powerPillIndices;
     private static int lastPacmanLocation;
+    private static boolean isPacmanSeen;
+    private static int kovalamaTimeOut = 0;
+    private static int currentLevel = 0 ;
+    public Constants.GHOST ghostType;
+    public int currentGhostLocation;
+
+
     private int pacmanLocation;
-    private boolean pacmanSeen;
+
     Messenger messenger;
     private int tickSeen = -1;
 
+
+    public int myDestinition = -1;
+    public int [] myDestinitionPath = null;
+    public String myDestinationReason = "";
+
+
     public GhostCommunication(Constants.GHOST ghost) {
         super(ghost);
+        this.ghostType = ghost;
     }
 
     @Override
     public Constants.MOVE getMove(Game game, long timeDue) {
 
+
+        Constants.GHOST myType = this.ghostType;
+        currentGhostLocation = game.getGhostCurrentNodeIndex(this.ghostType);
+
+        //1292 baslangıc noktası
+
         pacmanLocation = game.getPacmanCurrentNodeIndex();
-        if (game.getGhostCurrentNodeIndex(ghost) == lastPacmanLocation){
-            lastPacmanLocation = -1;
+        GhostCommunication.powerPillIndices = game.getPowerPillIndices();
+        if (currentLevel != game.getCurrentLevel()){
+            currentLevel++;
+            System.out.println("***YENI LEVEL'A GECILDI***");
+            GhostCommunication.protectedPowerPill = new Constants.GHOST[GhostCommunication.powerPillIndices.length];
+            myDestinationReason = "";
+            myDestinition = -1;
         }
-        //System.out.println("pacman last loc " + ghost + " " + lastPacmanLocation);
-        if (pacmanLocation != -1){
-            lastPacmanLocation = pacmanLocation;
-            pacmanSeen = true;
-            messenger = game.getMessenger();
-            tickSeen = game.getCurrentLevelTime();
-            messenger.addMessage(new BasicMessage(ghost,null, BasicMessage.MessageType.PACMAN_SEEN, lastPacmanLocation, tickSeen));
-        } else {
-            //lastPacmanLocation = -1;
-            pacmanSeen = false;
+        if (GhostCommunication.protectedPowerPill == null)
+            GhostCommunication.protectedPowerPill = new Constants.GHOST[GhostCommunication.powerPillIndices.length];
+
+
+
+        if(currentGhostLocation == 1292){
+            leavePowerPillTarget();
+            myDestinationReason = "";
+            myDestinition = -1;
+            return null;
+        }
+        if (currentGhostLocation == myDestinition) {
+            leavePowerPillTarget();
+            myDestinationReason = "";
+            myDestinition = -1;
+        }
+        //pacmeni kovaladım ve yedim diyelim tekrar köşelere gidebilmek icin kovalama modundan çıkaya çalışıyorum böylelikle tekrar köşelere  gideceğim
+        if(game.wasPacManEaten()) {
+            leavePowerPillTarget();
+            myDestinationReason = "";
+            myDestinition = -1;
+        }
+        if(GhostCommunication.isPacmanSeen){
+            if(GhostCommunication.kovalamaTimeOut == 5*4){
+                //bu şey demekbir kere gördük ama artık görmüyorsak
+                myDestinition = -1;
+                GhostCommunication.isPacmanSeen = false;
+                myDestinationReason = "we couldnt see any more";
+            }else {
+                GhostCommunication.kovalamaTimeOut++;
+                leavePowerPillTarget();
+                myDestinition = GhostCommunication.lastPacmanLocation;
+                myDestinationReason = "Someone saw pacmen";
+            }
         }
 
-        //eger pacmani gormuyorsam, goren arkadasim mesaj gondermis mi
-        if (!pacmanSeen && messenger != null){
-            for(Message message : messenger.getMessages(ghost)){
-                if (message.getType() == BasicMessage.MessageType.PACMAN_SEEN ){
-                    //System.out.println(message.getSender() + "goruldu.");
-                    lastPacmanLocation = message.getData();
+        //eğer birisi görürse zaten tekrar görünür kılar
+        if(game.getPacmanCurrentNodeIndex() != -1){
+            //pacman bir yerde görüldü demektir.
+            //kovalamam lazım
+            //myDestination_pacmen oluyor.
+            leavePowerPillTarget();
+            myDestinition = game.getPacmanCurrentNodeIndex();
+            //yetmez tüm ekip o namussuzu kovalamalıyız.
+            GhostCommunication.isPacmanSeen = true;
+            GhostCommunication.lastPacmanLocation = myDestinition;
+
+            myDestinationReason = "I saw pacmen";
+            GhostCommunication.kovalamaTimeOut = 0;
+        }
+        // artık hala hedeyif yoksa en yakın korunmayan Power Pill i korumaya gitmelyim
+        if (myDestinition == -1) {
+            for (int i = 0; i < GhostCommunication.powerPillIndices.length; i++) {
+                if (GhostCommunication.protectedPowerPill[i] == null) {
+                    GhostCommunication.protectedPowerPill[i] = this.ghostType;
+                    myDestinition = GhostCommunication.powerPillIndices[i];
+                    myDestinationReason = "Closest Power Pill";
+                    break;
                 }
             }
-            if (lastPacmanLocation != 0 && lastPacmanLocation != -1)
-                return game.getApproximateNextMoveTowardsTarget(game.getGhostCurrentNodeIndex(ghost),lastPacmanLocation, game.getGhostLastMoveMade(ghost), Constants.DM.PATH);
         }
-        if (lastPacmanLocation != 0 && lastPacmanLocation != -1)
-            return game.getApproximateNextMoveTowardsTarget(game.getGhostCurrentNodeIndex(ghost),lastPacmanLocation, game.getGhostLastMoveMade(ghost), Constants.DM.PATH);
-        return Constants.MOVE.UP;
+        String txt = String.format("IAM %8s, IAM at %5d, My Destination %5d , Reason : %20s", this.ghostType,currentGhostLocation, myDestinition,myDestinationReason );
+        System.out.println(txt);
+
+
+        return go_there(currentGhostLocation, myDestinition, game);
+
+
+    }
+
+    public void leavePowerPillTarget(){
+        for (int i = 0; i < GhostCommunication.powerPillIndices.length; i++) {
+            if (GhostCommunication.protectedPowerPill[i] == this.ghostType) {
+                GhostCommunication.protectedPowerPill[i] = null;
+                break;
+            }
+        }
+    }
+
+
+
+    public Constants.MOVE go_there( int myLoc, int Des, Game game){
+        try{myDestinitionPath = game.getShortestPath(myLoc, Des);}
+        catch (Exception e){
+            int a = 5;
+        }
+        if(game.isGhostEdible(this.ghostType) )
+            return game.getNextMoveAwayFromTarget(myLoc, Des, game.getGhostLastMoveMade(this.ghostType),Constants.DM.MANHATTAN);
+        return game.getNextMoveTowardsTarget(myLoc, Des, game.getGhostLastMoveMade(this.ghostType),Constants.DM.MANHATTAN);
+        /*
+        for(int i = 0 ; i< myDestinitionPath.length ; i++){
+            if (game.isJunction(myDestinitionPath[i]))
+                return game.getNextMoveTowardsTarget(myLoc, myDestinitionPath[i], game.getGhostLastMoveMade(this.ghostType),Constants.DM.MANHATTAN);
+        }
+        return null;
+        */
     }
 }
