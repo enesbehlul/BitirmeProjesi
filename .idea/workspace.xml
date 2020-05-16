@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacman2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deneme0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/deneme0.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deneme1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/deneme1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gameInformations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/gameInformations.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Blinky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Blinky.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Inky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Inky.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Pinky.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Pinky.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Sue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/Sue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/starter.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Blinky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Blinky.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Inky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Inky.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Pinky.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Pinky.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Sue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/Sue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +20,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -43,6 +38,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../MsPacman/starter0-1-7-2-common" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
@@ -50,6 +48,18 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+      <recent name="prediction" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -180,6 +190,12 @@
       <workItem from="1589547804648" duration="3630000" />
       <workItem from="1589592726199" duration="1121000" />
       <workItem from="1589593886579" duration="4978000" />
+      <workItem from="1589623437237" duration="1710000" />
+      <workItem from="1589625166262" duration="3310000" />
+      <workItem from="1589644620099" duration="588000" />
+      <workItem from="1589655776152" duration="1555000" />
+      <workItem from="1589670786418" duration="2221000" />
+      <workItem from="1589673083482" duration="16000" />
     </task>
     <servers />
   </component>
@@ -203,10 +219,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="685" y="293" width="431" height="274" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1586796156524" />
-    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1588091173685">
+    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1589625068351">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1588091173685" />
+    <state x="605" y="136" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860@0.0.1600.860" timestamp="1589625068351" />
     <state x="602" y="149" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1589466659591">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -219,22 +235,22 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="702" y="168" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1588176324822" />
-    <state width="1121" height="181" key="GridCell.Tab.0.bottom" timestamp="1589600429346">
+    <state width="772" height="234" key="GridCell.Tab.0.bottom" timestamp="1589673008851">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1121" height="181" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1589600429346" />
-    <state width="1121" height="181" key="GridCell.Tab.0.center" timestamp="1589600429346">
+    <state width="772" height="234" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1589673008851" />
+    <state width="772" height="234" key="GridCell.Tab.0.center" timestamp="1589673008851">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1121" height="181" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1589600429346" />
-    <state width="1121" height="181" key="GridCell.Tab.0.left" timestamp="1589600429345">
+    <state width="772" height="234" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1589673008851" />
+    <state width="772" height="234" key="GridCell.Tab.0.left" timestamp="1589673008851">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1121" height="181" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1589600429345" />
-    <state width="1121" height="181" key="GridCell.Tab.0.right" timestamp="1589600429346">
+    <state width="772" height="234" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1589673008851" />
+    <state width="772" height="234" key="GridCell.Tab.0.right" timestamp="1589673008851">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1121" height="181" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1589600429346" />
+    <state width="772" height="234" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1589673008851" />
     <state width="1121" height="181" key="GridCell.Tab.1.bottom" timestamp="1589600429346">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -251,18 +267,26 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1121" height="181" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1589600429346" />
+    <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1589625182002">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="330" y="85" key="Maven.ArtifactSearchDialog/0.0.1600.860@0.0.1600.860" timestamp="1589625182002" />
     <state x="301" y="9" key="SettingsEditor" timestamp="1589483318175">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="301" y="9" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1589483318175" />
+    <state x="571" y="243" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589623848973">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="571" y="243" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1600.860@0.0.1600.860" timestamp="1589623848973" />
     <state x="530" y="191" key="extract.method.dialog" timestamp="1589547389731">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="191" key="extract.method.dialog/0.0.1600.860@0.0.1600.860" timestamp="1589547389731" />
-    <state x="456" y="195" key="run.anything.popup" timestamp="1589595771151">
+    <state x="456" y="195" key="run.anything.popup" timestamp="1589625113013">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1589595771151" />
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1589625113013" />
     <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1589467783233">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -273,7 +297,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java</url>
-          <line>143</line>
+          <line>147</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
