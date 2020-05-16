@@ -42,8 +42,6 @@ public class MyPacMan extends PacmanController {
 
     long startTime, stopTime, elapsedTime;
 
-    int powerPillWaitingCounter = 0;
-
     // bu dizi yukari[0], asagi[1], sag[2] ve sol[3] yonlerde
     // hayalet var mi bilgisi tutacak
     boolean[] dangerousDirections = new boolean[4];
@@ -78,7 +76,7 @@ public class MyPacMan extends PacmanController {
             if (game.getGhostEdibleTime(ghost) == 0 && game.getGhostLairTime(ghost) == 0) {
                 ghostLocation = game.getGhostCurrentNodeIndex(ghost);
                 if (ghostLocation != -1) {
-                    getNodePositionByPacman(current, ghostLocation);
+                    getNodePositionByPacman(game, current, ghostLocation);
                     if (game.getShortestPathDistance(current, ghostLocation) < closestGhostDistance){
                         closestGhostDistance = game.getShortestPathDistance(current, ghostLocation);
                         closestGhostLocation = game.getGhostCurrentNodeIndex(ghost);
@@ -129,45 +127,47 @@ public class MyPacMan extends PacmanController {
         return -1;
     }
 
-    private int[] splitIntegerIntoTwoHalfs(int number){
-        int[] digits = new int[6];
-        for (int i = 0; i < 4; i++) {
-            digits[i] =  number % 10;
-            number = number / 10;
-        }
-        // gelen sayiyi ortadan ikiye boluyor
-        // ornegin 1204 -> 12 ve 04 olarak
-        // 12 dikey 04 ise yatay kontrol icin
-        digits[4] = digits[3]*10 + digits[2];
-        digits[5] = digits[1]*10 + digits[0];
-        return digits;
-    }
-
-    private void getNodePositionByPacman(int pacmanLocation, int ghostLocation){
+    /**
+     * eğer pacman ile hayalet birbirlerine 30 birim uzaklıktan daha yakınsa
+     * ve konumları arasındaki farkın mutlak değeri birbirlerine olan uzaklıktan daha fazlaysa
+     * dikey konumda karsilastir, oteki turlu yatayda karsilastir
+     *
+     * @param pacmanLocation the pacman location
+     * @param ghostLocation the ghost location
+     *
+     */
+    private void getNodePositionByPacman(Game game, int pacmanLocation, int ghostLocation){
         if (ghostLocation == -1){
             return;
         }
-        int[] pacmanDigits = splitIntegerIntoTwoHalfs(pacmanLocation);
-        int[] ghostDigits = splitIntegerIntoTwoHalfs(ghostLocation);
 
-        // bu durumda hayalet haritada pacman'e gore daha yukarı bir konumdadır
-        if (pacmanDigits[4] > ghostDigits[4]){
-            dangerousDirections[0] = true;
-            System.out.println("Hayalet yukarida");
-        } else if (pacmanDigits[4] < ghostDigits[4]){
-            dangerousDirections[1] = true;
-            System.out.println("Hayalet asagida");
-        }
-        // hayalet daha sagda
-        if (pacmanDigits[5] < ghostDigits[5]){
-            dangerousDirections[2] = true;
-            System.out.println("Hayalet sagda");
-        }
-        // bu durumda hayalet daha soldadir
-        // or: pacman: 88 > 76 : ghost
-        else if (pacmanDigits[5] > ghostDigits[5]){
-            dangerousDirections[3] = true;
-            System.out.println("Hayalet solda");
+        int pacmanIleGhostArasindakiMesafe = game.getShortestPathDistance(pacmanLocation, ghostLocation);
+
+        // aradaki farkin pozitif olmasi lazim
+        int fark = pacmanLocation - ghostLocation;
+        int farkMutlak = Math.abs(fark);
+        // eger hayalet pacman'e tresholdumuzdan daha yakinsa
+        if (pacmanIleGhostArasindakiMesafe < MIN_DISTANCE){
+
+            // bu kosulda dikeyde karsilastirmaliyiz, cunku dikeyde haritadaki degerler 4er 6 sar yukseliyor
+            // dolayisiyla harita konumlari arasindaki fark gercek mesafeden buyuk olacaktir
+            if (farkMutlak > pacmanIleGhostArasindakiMesafe){
+
+                // pacman lokasyonu hayaletinkinden kucukse, yani hayalet asagidaysa
+                if (fark < 0){
+                    dangerousDirections[1] = true;
+                } else {
+                    dangerousDirections[0] = true;
+                }
+
+            } else {
+                // bu kosulda pacman daha soldadir yani hayalet sagdadir, tehlikeli konum sag
+                if (fark < 0){
+                    dangerousDirections[2] = true;
+                } else{
+                    dangerousDirections[3] = true;
+                }
+            }
         }
     }
 
@@ -197,7 +197,7 @@ public class MyPacMan extends PacmanController {
                 if (ghostLocation != -1) {
                     // burada hayaletlerin pacman'e gore konumlari
                     // dangereousDirections dizisine aktariliyor
-                    getNodePositionByPacman(current, ghostLocation);
+                    getNodePositionByPacman(game, current, ghostLocation);
                 }
             }
         }

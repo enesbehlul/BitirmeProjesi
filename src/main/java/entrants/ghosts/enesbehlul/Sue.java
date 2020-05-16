@@ -13,8 +13,8 @@ public class Sue extends IndividualGhostController{
     GhostCommunication ghostCommunication;
     static int currentGhostLocation, pacmanLocation;
 
-    public Sue(Constants.GHOST ghost) {
-        super(ghost);
+    public Sue() {
+        super(Constants.GHOST.SUE);
         ghostCommunication = new GhostCommunication(Constants.GHOST.SUE);
     }
 

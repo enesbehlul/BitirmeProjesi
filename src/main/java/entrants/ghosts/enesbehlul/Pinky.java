@@ -12,8 +12,8 @@ public class Pinky extends IndividualGhostController{
     GhostCommunication ghostCommunication;
     static int currentGhostLocation, pacmanLocation;
 
-    public Pinky(Constants.GHOST ghost) {
-        super(ghost);
+    public Pinky() {
+        super(Constants.GHOST.PINKY);
         ghostCommunication = new GhostCommunication(Constants.GHOST.PINKY);
     }
 

@@ -12,8 +12,8 @@ public class Inky  extends  IndividualGhostController{
     GhostCommunication ghostCommunication;
     static int currentGhostLocation, pacmanLocation;
 
-    public Inky(Constants.GHOST ghost) {
-        super(ghost);
+    public Inky() {
+        super(Constants.GHOST.INKY);
         ghostCommunication = new GhostCommunication(Constants.GHOST.INKY);
     }
 

@@ -1,20 +1,15 @@
 
-import entrants.ghosts.enesbehlul.Blinky;
-//import examples.StarterGhost.Blinky;
-import entrants.ghosts.enesbehlul.Inky;
-//import examples.StarterGhost.Inky;
-import entrants.ghosts.enesbehlul.Pinky;
-//import examples.StarterGhost.Pinky;
-//import examples.StarterGhost.Sue;
-import entrants.ghosts.enesbehlul.Sue;
+//import entrants.ghosts.enesbehlul.*;
+//import examples.StarterPacMan.*;
+import examples.StarterGhost.*;
 import entrants.pacman.enesbehlul.*;
-import pacman.controllers.HumanController;
-//import examples.StarterPacMan.MyPacMan;
 import pacman.Executor;
 import pacman.controllers.IndividualGhostController;
 import pacman.controllers.KeyBoardInput;
 import pacman.controllers.MASController;
 import pacman.game.Constants.*;
+import pacman.game.internal.POType;
+import pacman.game.util.Stats;
 
 import java.util.EnumMap;
 
@@ -27,25 +22,37 @@ public class Main {
     public static void main(String[] args) {
         Executor executor = new Executor.Builder()
                 .setVisual(true)
+                //.setPOType(POType.RADIUS)
                 .setTickLimit(4000)
                 .build();
 
         EnumMap<GHOST, IndividualGhostController> controllers = new EnumMap<>(GHOST.class);
 
-        controllers.put(GHOST.INKY, new Inky(GHOST.INKY));
-        controllers.put(GHOST.BLINKY, new Blinky(GHOST.BLINKY));
-        controllers.put(GHOST.PINKY, new Pinky(GHOST.PINKY));
-        controllers.put(GHOST.SUE, new Sue(GHOST.SUE));
 
+        controllers.put(GHOST.INKY, new Inky());
+        controllers.put(GHOST.BLINKY, new Blinky());
+        controllers.put(GHOST.PINKY, new Pinky());
+        controllers.put(GHOST.SUE, new Sue());
+
+        //executor.runGame(new MyPacMan(), new MASController(controllers), 3);
         // Pacmani klavyeden yonetebilmek icin
-        //executor.runGameTimed(new HumanController(new KeyBoardInput()), new MASController(controllers));
+        //executor.runGame(new KlavyeKontrol(new KeyBoardInput()), new MASController(controllers), 40);
 
-       for (int i = 0; i<10; i++){
-           executor.runGame(new MyPacMan1(), new MASController(controllers), 1);
-       }
+        // delay suresini kisaltarak oyunu hizlandiriyoruz
+         /*
+       for (int i = 0; i < 10; i++){
+           executor.runGame(new MyPacMan(), new MASController(controllers), 1);
+        }*/
 
+        // /*
+        Stats[] stats = executor.runExperiment(new MyPacMan(), new MASController(controllers), 10, "denemeler");
+        for (int i = 0; i < stats.length; i++){
+            Executor.saveToFile(stats[i].toString(),"deneme" + i +".txt", false);
+        } //*/
 
+        // daha sonra oyunu replay yapabilmek icin kaydediyoruz
+        //executor.runGameTimedRecorded(new MyPacMan(), new MASController(controllers), "stats");
 
-
+        //executor.runGameTimed(new InformationSetMCTSPacMan(), new MASController(controllers));
     }
 }

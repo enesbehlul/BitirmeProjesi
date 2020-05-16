@@ -11,8 +11,8 @@ public class Blinky  extends IndividualGhostController {
     GhostCommunication ghostCommunication;
     static int currentGhostLocation, pacmanLocation;
 
-    public Blinky(Constants.GHOST ghost) {
-        super(ghost);
+    public Blinky() {
+        super(Constants.GHOST.BLINKY);
         ghostCommunication = new GhostCommunication(Constants.GHOST.BLINKY);
     }
 
