@@ -39,16 +39,19 @@ public class Main {
         //executor.runGame(new KlavyeKontrol(new KeyBoardInput()), new MASController(controllers), 40);
 
         // delay suresini kisaltarak oyunu hizlandiriyoruz
-         /*
+        // /*
        for (int i = 0; i < 10; i++){
-           executor.runGame(new MyPacMan(), new MASController(controllers), 40);
-        }*/
+           executor.runGame(new MyPacMan(), new MASController(controllers), 1);
+        }//*/
 
-         ///*
+         //
+        /*
         Stats[] stats = executor.runExperiment(new MyPacMan(), new MASController(controllers), 10, "denemeler");
         for (int i = 0; i < stats.length; i++){
             Executor.saveToFile(stats[i].toString(),"deneme" + i +".txt", false);
-        } //*/
+        } //
+
+         */
 
         // daha sonra oyunu replay yapabilmek icin kaydediyoruz
         //executor.runGameTimedRecorded(new MyPacMan(), new MASController(controllers), "stats");

@@ -3,15 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/belgeler/pseudo.java" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/pseudo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deneme0.txt" beforeDir="false" afterPath="$PROJECT_DIR$/deneme0.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deneme1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/deneme1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gameInformations.csv" beforeDir="false" afterPath="$PROJECT_DIR$/gameInformations.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan1.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +196,8 @@
       <workItem from="1589673083482" duration="380000" />
       <workItem from="1589679420076" duration="69000" />
       <workItem from="1589679536573" duration="810000" />
+      <workItem from="1589720822758" duration="6296000" />
+      <workItem from="1589727139487" duration="4388000" />
     </task>
     <servers />
   </component>
@@ -238,38 +237,38 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="702" y="168" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1588176324822" />
-    <state width="772" height="234" key="GridCell.Tab.0.bottom" timestamp="1589680346687">
+    <state width="772" height="218" key="GridCell.Tab.0.bottom" timestamp="1589731499522">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="772" height="234" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1589680346687" />
-    <state width="772" height="234" key="GridCell.Tab.0.center" timestamp="1589680346687">
+    <state width="772" height="218" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1589731499522" />
+    <state width="772" height="218" key="GridCell.Tab.0.center" timestamp="1589731499522">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="772" height="234" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1589680346687" />
-    <state width="772" height="234" key="GridCell.Tab.0.left" timestamp="1589680346687">
+    <state width="772" height="218" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1589731499522" />
+    <state width="772" height="218" key="GridCell.Tab.0.left" timestamp="1589731499522">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="772" height="234" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1589680346687" />
-    <state width="772" height="234" key="GridCell.Tab.0.right" timestamp="1589680346687">
+    <state width="772" height="218" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1589731499522" />
+    <state width="772" height="218" key="GridCell.Tab.0.right" timestamp="1589731499522">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="772" height="234" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1589680346687" />
-    <state width="1121" height="181" key="GridCell.Tab.1.bottom" timestamp="1589600429346">
+    <state width="772" height="218" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1589731499522" />
+    <state width="1328" height="204" key="GridCell.Tab.1.bottom" timestamp="1589729232476">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1121" height="181" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1589600429346" />
-    <state width="1121" height="181" key="GridCell.Tab.1.center" timestamp="1589600429346">
+    <state width="1328" height="204" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1589729232476" />
+    <state width="1328" height="204" key="GridCell.Tab.1.center" timestamp="1589729232475">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1121" height="181" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1589600429346" />
-    <state width="1121" height="181" key="GridCell.Tab.1.left" timestamp="1589600429346">
+    <state width="1328" height="204" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1589729232475" />
+    <state width="1328" height="204" key="GridCell.Tab.1.left" timestamp="1589729232475">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1121" height="181" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1589600429346" />
-    <state width="1121" height="181" key="GridCell.Tab.1.right" timestamp="1589600429346">
+    <state width="1328" height="204" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1589729232475" />
+    <state width="1328" height="204" key="GridCell.Tab.1.right" timestamp="1589729232476">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1121" height="181" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1589600429346" />
+    <state width="1328" height="204" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1589729232476" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1589625182002">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -286,22 +285,32 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="191" key="extract.method.dialog/0.0.1600.860@0.0.1600.860" timestamp="1589547389731" />
-    <state x="456" y="195" key="run.anything.popup" timestamp="1589625113013">
+    <state x="456" y="195" key="run.anything.popup" timestamp="1589727080744">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1589625113013" />
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1589467783233">
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1589727080744" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1589727085269">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1589467783233" />
+    <state x="463" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1600.860@0.0.1600.860" timestamp="1589727085269" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java</url>
-          <line>147</line>
+          <line>139</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java</url>
+          <line>140</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java</url>
+          <line>300</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

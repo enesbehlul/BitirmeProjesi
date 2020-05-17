@@ -18,19 +18,11 @@ import java.util.concurrent.TimeUnit;
  * be placed in this package or sub-packages (e.g., entrants.pacman.username).
  */
 
-enum State{
-    SAFE,
-    DANGER,
-    HUNTING
-}
-
 public class MyPacMan extends PacmanController {
     //bu move nesneleri metodlarda kullanilmak uzre olusturuldu
     private MOVE myMove = Constants.MOVE.NEUTRAL;
     private MOVE escapingMove;
     private MOVE catchingMove;
-
-    State state;
 
     static int current;
     static int temp;
