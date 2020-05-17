@@ -28,6 +28,9 @@ Function getMove()
 
 
 
+
+int hedefPil, aktifHedefPil, hayaletKonumu, konumum, birOncekiKonum;
+
 Function getMove()
 	konumum = getPacmanLocation()
 	for(Ghost hayalet : Ghosts)
@@ -41,18 +44,15 @@ Function getMove()
 			if hayaletKonumu != NULL
 				return game.getNextMoveTowardsTarget(konumum, hayaletKonumu)
 
-		
-//Ikinci donem
-Function getMove()
-	konumum = getPacmanLocation()
-	for(Ghost hayalet : Ghosts)
-		if hayalet.edibleTime == 0
-			hayaletKonumu = hayalet.getGhostCurrentNodeIndex()
-			if hayaletKonumu != NULL
-				return game.getNextMoveAwayFromTarget(konumum, hayaletKonumu)
+	if birOncekiKonum == konumum
+		return getRandomMove(game.getPossibleMoves(konumum))
+	else 
+		try
+			aktifHedefPil = game.getActivePillsIndices()[0]
+			return game.getNextMoveTowardsTarget(konumum, aktifHedefPil)
+		catch
+			return getRandomMove(game.getPossibleMoves(konumum))
 
-		if hayalet.edibleTime > 0
-			hayaletKonumu = hayalet.getGhostCurrentNodeIndex()
-			if hayaletKonumu != NULL
-				return game.getNextMoveTowardsTarget(konumum, hayaletKonumu)
+	birOncekiKonum = konumum
+	
 		

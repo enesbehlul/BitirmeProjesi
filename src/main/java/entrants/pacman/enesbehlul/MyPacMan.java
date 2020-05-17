@@ -281,8 +281,8 @@ public class MyPacMan extends PacmanController {
         if (game.getActivePillsIndices().length == 0){
             return -1;
         }
-        //closestActivePillLocation = game.getClosestNodeIndexFromNodeIndex(current, game.getActivePillsIndices(), Constants.DM.MANHATTAN);
-        ///*
+        closestActivePillLocation = game.getClosestNodeIndexFromNodeIndex(current, game.getActivePillsIndices(), Constants.DM.MANHATTAN);
+        /*
         closestActivePillDistance = Integer.MAX_VALUE;
         for (int i = 0; i<game.getActivePillsIndices().length; i++){
 
@@ -290,7 +290,7 @@ public class MyPacMan extends PacmanController {
                 closestActivePillDistance = game.getShortestPathDistance(current, game.getActivePillsIndices()[i]);
                 closestActivePillLocation = game.getActivePillsIndices()[i];
             }
-        }//*/
+        }*/
         return closestActivePillLocation;
     }
 
@@ -320,19 +320,10 @@ public class MyPacMan extends PacmanController {
 
             visitedLocations.clear();
             System.out.println("Ziyaret edilen konumlar dizisi sifirlandi.");
-
-            saveGameInformation(game);
-        }
-        if (game.gameOver()){
-            saveGameInformation(game);
-            System.out.println("BITTI");
-        }
-        if (game.getPacmanNumberOfLivesRemaining() <= 0){
-            saveGameInformation(game);
-            System.out.println("BITTI");
         }
     }
 
+    // bu metodu artik kullanmiyoruz cunku main sinifinda executor metotlari ile bu islemleri gerceklestirebiliyoruz
     private void saveGameInformation(Game game){
         try (PrintWriter writer = new PrintWriter(new File("gameInformations.csv"))) {
 
@@ -356,8 +347,6 @@ public class MyPacMan extends PacmanController {
         System.out.print("millisecond and ");
         System.out.print(elapsedTime);
         System.out.println("nanosecond.");
-
-
     }
 
     public MOVE getMove(Game game, long timeDue) {
@@ -373,8 +362,6 @@ public class MyPacMan extends PacmanController {
         escapingMove = getNewEscapingMoveFromGhosts(game);
         if (escapingMove != null){
             temp = current;
-            printMoveMethotExecutionTime(startTime, System.nanoTime());
-            checkState(game);
             return escapingMove;
         }
 
@@ -382,16 +369,12 @@ public class MyPacMan extends PacmanController {
 
         if (catchingMove != null){
             temp = current;
-            printMoveMethotExecutionTime(startTime, System.nanoTime());
-            checkState(game);
             return catchingMove;
         }
 
         //eger pacman sabitse(bir onceki konumu ile ayni yerdeyse
         if (current == temp){
             System.out.println("Ayni yerde takilma sorunu");
-            checkState(game);
-            printMoveMethotExecutionTime(startTime, System.nanoTime());
             return getRandomMove(game.getPossibleMoves(current));
         } else {
             try {
@@ -429,15 +412,11 @@ public class MyPacMan extends PacmanController {
 
 
                 temp = current;
-                checkState(game);
-                printMoveMethotExecutionTime(startTime, System.nanoTime());
                 return game.getNextMoveTowardsTarget(current, activeTargetPill, game.getPacmanLastMoveMade(), Constants.DM.MANHATTAN);
             } catch (ArrayIndexOutOfBoundsException e){
                 System.out.println("gorunurde pil yok");
                 int pillLocation = getClosestUnvisitedLocation(game);
                 temp = current;
-                printMoveMethotExecutionTime(startTime, System.nanoTime());
-                checkState(game);
                 return game.getNextMoveTowardsTarget(current, pillLocation, game.getPacmanLastMoveMade(), Constants.DM.MANHATTAN);
             }
         }
