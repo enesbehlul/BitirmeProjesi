@@ -28,7 +28,7 @@ public class MyPacMan1 extends PacmanController {
     static int temp;
     static int random;
     static int lastGhostSeenLoc;
-    static int MIN_DISTANCE = 35;
+    static int MIN_DISTANCE = 50;
     static int closestGhostDistance;
     static int closestGhostLocation;
     static int targetPill;
@@ -131,7 +131,8 @@ public class MyPacMan1 extends PacmanController {
     /**
      * eğer pacman ile hayalet birbirlerine 30 birim uzaklıktan daha yakınsa
      * ve konumları arasındaki farkın mutlak değeri birbirlerine olan uzaklıktan daha fazlaysa
-     * dikey konumda karsilastir, oteki turlu yatayda karsilastir
+     * dikey konumda karsilastir, oteki turlu yatayda karsilastir, karsilastima sonucu konumu belirle
+     * ve bir dizi icinde hangi yonde ve ne kadar uzaklikta oldugunu kaydet
      *
      * @param pacmanLocation the pacman location
      * @param ghostLocation the ghost location
@@ -152,17 +153,17 @@ public class MyPacMan1 extends PacmanController {
 
                 // pacman lokasyonu hayaletinkinden kucukse, yani hayalet asagidaysa
                 if (fark < 0){
-                    dangerousDirections2.put(MOVE.DOWN, ghostLocation);
+                    dangerousDirections2.put(MOVE.DOWN, pacmanIleGhostArasindakiMesafe);
                 } else {
-                    dangerousDirections2.put(MOVE.UP, ghostLocation);
+                    dangerousDirections2.put(MOVE.UP, pacmanIleGhostArasindakiMesafe);
                 }
 
             } else {
                 // bu kosulda pacman daha soldadir yani hayalet sagdadir, tehlikeli konum sag
                 if (fark < 0){
-                    dangerousDirections2.put(MOVE.RIGHT, ghostLocation);
+                    dangerousDirections2.put(MOVE.RIGHT, pacmanIleGhostArasindakiMesafe);
                 } else{
-                    dangerousDirections2.put(MOVE.LEFT, ghostLocation);
+                    dangerousDirections2.put(MOVE.LEFT, pacmanIleGhostArasindakiMesafe);
                 }
             }
         }
@@ -200,11 +201,32 @@ public class MyPacMan1 extends PacmanController {
         Random random = new Random();
 
         if (isThereAnyDangereousDirection()){
+
+            // eger gidilebilecek yon sayisi ile tehlikeli yon sayisi esitse, etrafimiz sarilmis demektir
+            // bu durumda bize uzak olan hayaletin bulundugu konuma kadar gidersek belki kurtuluruz(bi umit)
+            if (dangerousDirections2.size() == game.getPossibleMoves(currentPacmanLocation).length){
+                int tempGhostDistance = Integer.MIN_VALUE;
+                MOVE tempMove = null;
+                for (Map.Entry<MOVE, Integer> moveAndDistance: dangerousDirections2.entrySet()) {
+                    if (tempGhostDistance < moveAndDistance.getValue()){
+                        tempGhostDistance = moveAndDistance.getValue();
+                        tempMove = moveAndDistance.getKey();
+                    }
+                }
+                System.out.println("Etrafimiz sarildi...");
+                return tempMove;
+            }
+
+            // UNUTMA! etrafimiz sariliyken, ornegin iki hayalet arasindaysak arada bir yerde junction varsa oraya yonelt UNUTMA!
+
             // eger kovalanirken, en yakindaki power pile gitmek icin donmemiz gereken yon guvenli ise
             // o yone donelim degilse rastgele
             MOVE closestPowerPillMove = getMoveForClosestAvailablePowerPill(game);
-            if (!dangerousDirections2.containsKey(closestPowerPillMove))
+            if (!dangerousDirections2.containsKey(closestPowerPillMove)){
+                System.out.println("hayalet goruldu, en yakindaki power pille yonelindi");
                 return closestPowerPillMove;
+            }
+            System.out.println("En yakindaki power pile gitmek icin gereken yon tehlikeli");
 
             // dongu sayisi 100 cunku rastgele bir guvenli yone kacmak isyorum
             for (int i = 0; i < 100; i++){
@@ -293,7 +315,6 @@ public class MyPacMan1 extends PacmanController {
                 }
             }
         }
-        System.out.println("Gorunurde olmayan en yakindaki pille gidiliyor.");
         return closestPillLocation;
     }
 
@@ -369,18 +390,15 @@ public class MyPacMan1 extends PacmanController {
         // metodun calisma sureseni hesaplamak istersek diye
         startTime = System.nanoTime();
 
-
         currentPacmanLocation = game.getPacmanCurrentNodeIndex();
-        if (!visitedLocations.contains(currentPacmanLocation)){
-            visitedLocations.add(currentPacmanLocation);
-        }
 
-        //System.out.println("pacman: "+ currentPacmanLocation);
-        System.out.println("not seen counter " + ghostNotSeenCounter);
+        //eger pacman sabitse(bir onceki konumu ile ayni yerdeyse
+
+        visitedLocations.add(currentPacmanLocation);
+
         escapingMove = getNewEscapingMoveFromGhosts(game);
         if (escapingMove != null){
             ghostNotSeenCounter = 0;
-            temp = currentPacmanLocation;
             return escapingMove;
         }
         // tehlikeli hayalet yok arttiracagiz
@@ -389,34 +407,28 @@ public class MyPacMan1 extends PacmanController {
         catchingMove = getPacmanCatchingMoveForGhosts(game);
 
         if (catchingMove != null){
-            temp = currentPacmanLocation;
             return catchingMove;
         }
 
-        //eger pacman sabitse(bir onceki konumu ile ayni yerdeyse
-        if (currentPacmanLocation == temp){
-            System.out.println("Ayni yerde takilma sorunu");
-            return getRandomMove(game.getPossibleMoves(currentPacmanLocation));
-        } else {
+        // power pili her zaman yemesin, tehlike durumunda yesin diye
+        /*
+        if (game.getActivePowerPillsIndices().length != 0) {
+            System.out.println("not seen counter " + ghostNotSeenCounter);
+            System.out.println(visitedLocations.size() + " " + game.getPillIndices().length);
+            if (ghostNotSeenCounter > 20 && visitedLocations.size() < 900) {
+                return game.getNextMoveAwayFromTarget(currentPacmanLocation, game.getActivePowerPillsIndices()[0], Constants.DM.MANHATTAN);
+            }
+        }*/
 
-                //gorus alanindaki pillerden en yakin olanini bul
+        //gorus alanindaki pillerden en yakin olanini bul
+        activeTargetPill = getClosestActivePillIndice(game);
 
-                activeTargetPill = getClosestActivePillIndice(game);
-                //System.out.println("target pill " + activeTargetPill);
-
-                if (game.getActivePowerPillsIndices().length != 0){
-                    System.out.println(visitedLocations.size() + " " + game.getPillIndices().length);
-                    if (game.getShortestPathDistance(currentPacmanLocation, game.getActivePowerPillsIndices()[0]) <  5 && ghostNotSeenCounter > 30 && visitedLocations.size() < 900)
-                        return game.getNextMoveAwayFromTarget(currentPacmanLocation, game.getActivePowerPillsIndices()[0], Constants.DM.PATH);
-                }
-
-                if (activeTargetPill == -1){
-                    return getMoveForClosestUnvisitedLocation(game);
-                }
-
-                temp = currentPacmanLocation;
-                return game.getNextMoveTowardsTarget(currentPacmanLocation, activeTargetPill, game.getPacmanLastMoveMade(), Constants.DM.MANHATTAN);
-
+        if (activeTargetPill == -1){
+            return getMoveForClosestUnvisitedLocation(game);
         }
+
+
+
+        return game.getNextMoveTowardsTarget(currentPacmanLocation, activeTargetPill, Constants.DM.MANHATTAN);
     }
 }

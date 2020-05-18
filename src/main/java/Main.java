@@ -1,7 +1,7 @@
 
-//import entrants.ghosts.enesbehlul.*;
+import entrants.ghosts.enesbehlul.*;
 //import examples.StarterPacMan.*;
-import examples.StarterGhost.*;
+//import examples.StarterGhost.*;
 import entrants.pacman.enesbehlul.*;
 import pacman.Executor;
 import pacman.controllers.IndividualGhostController;
@@ -28,7 +28,6 @@ public class Main {
 
         EnumMap<GHOST, IndividualGhostController> controllers = new EnumMap<>(GHOST.class);
 
-
         controllers.put(GHOST.INKY, new Inky());
         controllers.put(GHOST.BLINKY, new Blinky());
         controllers.put(GHOST.PINKY, new Pinky());
@@ -39,19 +38,22 @@ public class Main {
         //executor.runGame(new KlavyeKontrol(new KeyBoardInput()), new MASController(controllers), 40);
 
         // delay suresini kisaltarak oyunu hizlandiriyoruz
-        // /*
        for (int i = 0; i < 10; i++){
-           executor.runGame(new MyPacMan(), new MASController(controllers), 1);
-        }//*/
+           executor.runGame(new MyPacMan1(), new MASController(controllers), 10);
+        }
 
-         //
-        /*
+
+
+        ///*
         Stats[] stats = executor.runExperiment(new MyPacMan(), new MASController(controllers), 10, "denemeler");
         for (int i = 0; i < stats.length; i++){
-            Executor.saveToFile(stats[i].toString(),"deneme" + i +".txt", false);
-        } //
+            Executor.saveToFile(stats[i].toString(),"mypacman_" + i +".txt", false);
+        } //*/
 
-         */
+        Stats[] stats2 = executor.runExperiment(new MyPacMan1(), new MASController(controllers), 10, "denemeler");
+        for (int i = 0; i < stats2.length; i++){
+            Executor.saveToFile(stats2[i].toString(),"mypacman1_" + i +".txt", false);
+        } //*/
 
         // daha sonra oyunu replay yapabilmek icin kaydediyoruz
         //executor.runGameTimedRecorded(new MyPacMan(), new MASController(controllers), "stats");

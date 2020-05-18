@@ -7,7 +7,14 @@ import pacman.game.comms.BasicMessage;
 import pacman.game.comms.Message;
 import pacman.game.comms.Messenger;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class GhostCommunication extends IndividualGhostController {
+
+
+    static Set<Integer> availablePillsIndices = new HashSet<Integer>();
+    static Set<Integer> eatedPowerPillsIndices = new HashSet<Integer>();
 
 
     private static Constants.GHOST[] protectedPowerPill = null;
@@ -36,6 +43,15 @@ public class GhostCommunication extends IndividualGhostController {
         this.ghostType = ghost;
     }
 
+    int getPillIndex(int[] list, int index){
+        for (int i = 0; i < list.length; i++){
+            if (list[i] == index){
+                return i;
+            }
+        }
+        return -1;
+    }
+
     @Override
     public Constants.MOVE getMove(Game game, long timeDue) {
 
@@ -43,6 +59,28 @@ public class GhostCommunication extends IndividualGhostController {
         Constants.GHOST myType = this.ghostType;
         currentGhostLocation = game.getGhostCurrentNodeIndex(this.ghostType);
 
+        int pillIndex = getPillIndex(game.getPillIndices(), currentGhostLocation);
+        if (pillIndex != -1){
+            System.out.println("ghost konumu: " + currentGhostLocation);
+            if (game.isPillStillAvailable(pillIndex)){
+                availablePillsIndices.add(currentGhostLocation);
+            } else {
+                availablePillsIndices.remove(currentGhostLocation);
+            }
+        }
+        int powerPillIndex = getPillIndex(game.getPowerPillIndices(), currentGhostLocation);
+
+        if (powerPillIndex != -1){
+            if (!game.isPowerPillStillAvailable(powerPillIndex)){
+                eatedPowerPillsIndices.add(currentGhostLocation);
+            }
+        }
+
+        if(eatedPowerPillsIndices.contains(myDestinition)){
+            myDestinition = -1;
+            leavePowerPillTarget();
+            myDestinationReason = "";
+        }
         //1292 baslangıc noktası
 
         pacmanLocation = game.getPacmanCurrentNodeIndex();
@@ -59,12 +97,12 @@ public class GhostCommunication extends IndividualGhostController {
 
 
 
-        if(currentGhostLocation == 1292){
+        if(currentGhostLocation == game.getGhostInitialNodeIndex()){
             leavePowerPillTarget();
             myDestinationReason = "";
             myDestinition = -1;
-            return null;
         }
+
         if (currentGhostLocation == myDestinition) {
             leavePowerPillTarget();
             myDestinationReason = "";
