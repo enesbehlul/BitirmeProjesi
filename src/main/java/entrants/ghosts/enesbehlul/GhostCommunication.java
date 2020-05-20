@@ -61,7 +61,7 @@ public class GhostCommunication extends IndividualGhostController {
 
         int pillIndex = getPillIndex(game.getPillIndices(), currentGhostLocation);
         if (pillIndex != -1){
-            System.out.println("ghost konumu: " + currentGhostLocation);
+            //System.out.println("ghost konumu: " + currentGhostLocation);
             if (game.isPillStillAvailable(pillIndex)){
                 availablePillsIndices.add(currentGhostLocation);
             } else {
@@ -87,7 +87,7 @@ public class GhostCommunication extends IndividualGhostController {
         GhostCommunication.powerPillIndices = game.getPowerPillIndices();
         if (currentLevel != game.getCurrentLevel()){
             currentLevel++;
-            System.out.println("***YENI LEVEL'A GECILDI***");
+            //System.out.println("***YENI LEVEL'A GECILDI***");
             GhostCommunication.protectedPowerPill = new Constants.GHOST[GhostCommunication.powerPillIndices.length];
             myDestinationReason = "";
             myDestinition = -1;
@@ -154,7 +154,7 @@ public class GhostCommunication extends IndividualGhostController {
             }
         }
         String txt = String.format("IAM %8s, IAM at %5d, My Destination %5d , Reason : %20s", this.ghostType,currentGhostLocation, myDestinition,myDestinationReason );
-        System.out.println(txt);
+        //System.out.println(txt);
 
 
         return go_there(currentGhostLocation, myDestinition, game);

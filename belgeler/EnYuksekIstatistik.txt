@@ -1,0 +1,3 @@
+Stats{Desc=denemeler, average=6205.0, sum=62050.0, sumsq=6.041555E8, sd=4934.40585188441, n=10, min=2530.0, max=19850.0, stdErr=1560.396139161819, ms=4487}
+Stats{Desc=denemeler Ticks, average=1373.6, sum=13736.0, sumsq=3.0327408E7, sd=1128.4029225217187, n=10, min=100.0, max=3343.0, stdErr=356.83233535591415, ms=4487}
+

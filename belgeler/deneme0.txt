@@ -1,1 +1,1 @@
-Stats{Desc=denemeler, average=4478.0, sum=44780.0, sumsq=2.421984E8, sd=2151.8353923001537, n=10, min=2560.0, max=9510.0, stdErr=680.4700989430436, ms=23181}
+Stats{Desc=denemeler, average=4318.4, sum=863680.0, sumsq=4.375885E9, sd=1801.966106575325, n=200, min=1160.0, max=10650.0, stdErr=127.41824534277333, ms=17983}
