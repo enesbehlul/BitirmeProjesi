@@ -17,3 +17,12 @@ Stats{Desc=denemeler Ticks, average=2086.825, sum=417365.0, sumsq=1.076349693E9,
 Stats{Desc=denemeler Ticks, average=2169.845, sum=433969.0, sumsq=1.166039181E9, sd=1061.8882304862536, n=200, min=122.0, max=3991.0, stdErr=75.08683686390134, ms=17425}
 Stats{Desc=denemeler Ticks, average=1978.505, sum=395701.0, sumsq=9.78779649E8, sd=992.1380445645464, n=200, min=108.0, max=3893.0, stdErr=70.15475391847518, ms=15931}
 Stats{Desc=denemeler Ticks, average=2012.605, sum=402521.0, sumsq=1.045842767E9, sd=1088.3738960776836, n=200, min=108.0, max=3997.0, stdErr=76.95965623829528, ms=17191}
+Stats{Desc=denemeler Ticks, average=2100.735, sum=420147.0, sumsq=1.071517613E9, sd=974.2929531551785, n=200, min=121.0, max=3953.0, stdErr=68.89291540382939, ms=15756}
+Stats{Desc=denemeler Ticks, average=1950.79, sum=390158.0, sumsq=9.66526706E8, sd=1015.9788239691658, n=200, min=122.0, max=3958.0, stdErr=71.84055159705308, ms=15751}
+Stats{Desc=denemeler Ticks, average=978.51, sum=195702.0, sumsq=2.33390464E8, sd=458.8279802686263, n=200, min=441.0, max=3596.0, stdErr=32.444037624607304, ms=5674}
+Stats{Desc=denemeler Ticks, average=978.235, sum=195647.0, sumsq=2.45655341E8, sd=522.2034777131212, n=200, min=403.0, max=3297.0, stdErr=36.925362025014614, ms=5676}
+Stats{Desc=denemeler Ticks, average=2105.905, sum=421181.0, sumsq=1.088333123E9, sd=1005.9270311183969, n=200, min=120.0, max=3995.0, stdErr=71.12978250826697, ms=17387}
+Stats{Desc=denemeler Ticks, average=2098.81, sum=419762.0, sumsq=1.062637376E9, sd=955.3780403062954, n=200, min=108.0, max=3986.0, stdErr=67.55542908972961, ms=16895}
+Stats{Desc=denemeler Ticks, average=1827.835, sum=365567.0, sumsq=8.34605159E8, sd=914.4540111275888, n=200, min=122.0, max=3861.0, stdErr=64.66166323515566, ms=15214}
+Stats{Desc=denemeler Ticks, average=1814.875, sum=362975.0, sumsq=9.20264757E8, sd=1146.3520990735137, n=200, min=100.0, max=3966.0, stdErr=81.05933428823145, ms=16718}
+Stats{Desc=denemeler Ticks, average=1815.42, sum=363084.0, sumsq=8.89793074E8, sd=1076.5735677761047, n=200, min=112.0, max=3984.0, stdErr=76.12524702206788, ms=12643}

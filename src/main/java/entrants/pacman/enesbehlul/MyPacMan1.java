@@ -44,9 +44,9 @@ public class MyPacMan1 extends PacmanController {
 
     Set<Integer> visitedLocations = new HashSet<Integer>();
 
-    Map<MOVE, Integer> dangerousDirections = new HashMap<MOVE, Integer>();
+    Map<MOVE, Constants.GHOST> dangerousDirections = new HashMap<MOVE, Constants.GHOST>();
 
-    Map<MOVE, Integer> eatableGhostsDirections = new HashMap<MOVE, Integer>();
+    Map<MOVE, Constants.GHOST> eatableGhostsDirections = new HashMap<MOVE, Constants.GHOST>();
 
     private MOVE getRandomMove(MOVE[] possibleMoves){
         random = new Random().nextInt(possibleMoves.length);
@@ -134,7 +134,7 @@ public class MyPacMan1 extends PacmanController {
     }
 
 
-    private Map.Entry<MOVE, Integer> getRelativeDirectionAndDistanceBetweenTwoNodes(Game game, int fromNodeIndex, int toNodeIndex){
+    private Map.Entry<MOVE, Constants.GHOST> getRelativeDirectionAndGhostObjectBetweenPacmanAndGhost(Game game, int fromNodeIndex, int toNodeIndex, Constants.GHOST ghost){
         // burada herhangi iki noktadan biri digerine gore hangi yonde onu hesapliyoruz
         // bunu hesaplarken oyunun haritasindaki konum bilgilerini kullaniyoruz
         // haritada saga gidildikce konum degeri 1er 1er artarken, asagi gidildikce 4er 6sar artiyor
@@ -152,17 +152,17 @@ public class MyPacMan1 extends PacmanController {
 
             // pacman lokasyonu hayaletinkinden kucukse, yani hayalet asagidaysa
             if (range < 0){
-                return new AbstractMap.SimpleEntry(MOVE.DOWN, distanceBetweenNodes);
+                return new AbstractMap.SimpleEntry(MOVE.DOWN, ghost);
             } else {
-                return new AbstractMap.SimpleEntry(MOVE.UP, distanceBetweenNodes);
+                return new AbstractMap.SimpleEntry(MOVE.UP, ghost);
             }
 
         } else {
             // bu kosulda pacman daha soldadir yani hayalet sagdadir, tehlikeli konum sag
             if (range < 0) {
-                return new AbstractMap.SimpleEntry(MOVE.RIGHT, distanceBetweenNodes);
+                return new AbstractMap.SimpleEntry(MOVE.RIGHT, ghost);
             } else {
-                return new AbstractMap.SimpleEntry(MOVE.LEFT, distanceBetweenNodes);
+                return new AbstractMap.SimpleEntry(MOVE.LEFT, ghost);
             }
         }
     }
@@ -183,8 +183,8 @@ public class MyPacMan1 extends PacmanController {
                 if (game.getGhostEdibleTime(ghost) == 0 && game.getGhostLairTime(ghost) == 0) {
                     // eger hayalet pacman'e tresholdumuzdan daha yakinsa
                     if (distanceBetweenPacmanAndGhost < MIN_DISTANCE){
-                        Map.Entry<MOVE, Integer> moveAndDistance = getRelativeDirectionAndDistanceBetweenTwoNodes(game, currentPacmanLocation, ghostLocation);
-                        dangerousDirections.put(moveAndDistance.getKey(), moveAndDistance.getValue());
+                        Map.Entry<MOVE, Constants.GHOST> moveAndDistance = getRelativeDirectionAndGhostObjectBetweenPacmanAndGhost(game, currentPacmanLocation, ghostLocation, ghost);
+                        dangerousDirections.put(moveAndDistance.getKey(), ghost);
                     }
                 }
             }
@@ -203,8 +203,8 @@ public class MyPacMan1 extends PacmanController {
             if (ghostLocation != -1) {
                 // eger hayalet yenilebilir durumda ise
                 if (game.getGhostEdibleTime(ghost) > 0 && game.getGhostLairTime(ghost) == 0) {
-                    Map.Entry<MOVE, Integer> moveAndDistance = getRelativeDirectionAndDistanceBetweenTwoNodes(game, currentPacmanLocation, ghostLocation);
-                    eatableGhostsDirections.put(moveAndDistance.getKey(), moveAndDistance.getValue());
+                    Map.Entry<MOVE, Constants.GHOST> moveAndDistance = getRelativeDirectionAndGhostObjectBetweenPacmanAndGhost(game, currentPacmanLocation, ghostLocation, ghost);
+                    eatableGhostsDirections.put(moveAndDistance.getKey(), ghost);
                 }
             }
         }
@@ -244,11 +244,13 @@ public class MyPacMan1 extends PacmanController {
             // bu durumda bize uzak olan hayaletin bulundugu konuma kadar gidersek belki kurtuluruz(bi umit)
             if (dangerousDirections.size() == game.getPossibleMoves(currentPacmanLocation).length){
                 int tempGhostDistance = Integer.MIN_VALUE;
+                int distanceBetweenPacmanAndGhost;
                 MOVE tempMove = null;
-                for (Map.Entry<MOVE, Integer> moveAndDistance: dangerousDirections.entrySet()) {
-                    if (tempGhostDistance < moveAndDistance.getValue()){
-                        tempGhostDistance = moveAndDistance.getValue();
-                        tempMove = moveAndDistance.getKey();
+                for (Map.Entry<MOVE, Constants.GHOST> moveAndGhost: dangerousDirections.entrySet()) {
+                    distanceBetweenPacmanAndGhost = game.getShortestPathDistance(currentPacmanLocation, game.getGhostCurrentNodeIndex(moveAndGhost.getValue()));
+                    if (tempGhostDistance < distanceBetweenPacmanAndGhost){
+                        tempGhostDistance = distanceBetweenPacmanAndGhost;
+                        tempMove = moveAndGhost.getKey();
                     }
                 }
                 System.out.println("Etrafimiz sarildi...");
@@ -257,6 +259,13 @@ public class MyPacMan1 extends PacmanController {
 
             // UNUTMA! etrafimiz sariliyken, ornegin iki hayalet arasindaysak arada bir yerde junction varsa oraya yonelt UNUTMA!
 
+            // Buraya hayalet bize dogru geliyorsa kacalim yoksa kacmayalim kodu yazilacak
+            for (Map.Entry<MOVE, Constants.GHOST> moveAndGhost: dangerousDirections.entrySet()) {
+                if (!isDangerousGhostComingTowerdsPacman(game, moveAndGhost.getValue())){
+                    return null;
+                }
+            }
+            
             // eger kovalanirken, en yakindaki power pile gitmek icin donmemiz gereken yon guvenli ise
             // o yone donelim degilse rastgele
             MOVE closestPowerPillMove = getMoveForClosestAvailablePowerPill(game);
@@ -321,21 +330,57 @@ public class MyPacMan1 extends PacmanController {
 
     }
 
+    public boolean isDangerousGhostComingTowerdsPacman(Game game, Constants.GHOST dangerousGhost){
+        int dangerousGhostLocation = game.getGhostCurrentNodeIndex(dangerousGhost);
+        MOVE dangerousGhostLastMove = game.getGhostLastMoveMade(dangerousGhost);
+        Map.Entry<MOVE, Constants.GHOST> pacmanDirectionByGhost = getRelativeDirectionAndGhostObjectBetweenPacmanAndGhost(game, dangerousGhostLocation, currentPacmanLocation, dangerousGhost);
+        if ((dangerousGhostLastMove == pacmanDirectionByGhost.getKey())){
+            return true;
+        }
+        return false;
+    }
+
     // eger pacman hem yenilebilir hem de kacmasi gereken hayalet goruyorsa, yakin olan hangisiyse ondan kacacak
-    private MOVE getCatchingOrEscapingMove(){
+    private MOVE getCatchingOrEscapingMove(Game game){
         // gorunurde hem yenilebilir hem de kacilmasi gereken hayalet varsa
         if (escapingMove != null && catchingMove != null){
-            for (Map.Entry<MOVE, Integer> moveAndDistanceForDanger: dangerousDirections.entrySet()) {
-                for (Map.Entry<MOVE, Integer> moveAndDistanceForEat: eatableGhostsDirections.entrySet()) {
-                    // eger yenilebilir hayaler daha yakinsa
-                    if (moveAndDistanceForEat.getValue() < moveAndDistanceForDanger.getValue()){
-                        return moveAndDistanceForEat.getKey();
+            MOVE pacmanLastMove = game.getPacmanLastMoveMade();
+
+            for (Map.Entry<MOVE, Constants.GHOST> directionAndGhostTypeForDangerousGhost: dangerousDirections.entrySet()) {
+
+                Constants.GHOST dangerousGhost = directionAndGhostTypeForDangerousGhost.getValue();
+                int dangerousGhostLocation = game.getGhostCurrentNodeIndex(dangerousGhost);
+                MOVE dangerousGhostLastMove = game.getGhostLastMoveMade(dangerousGhost);
+                for (Map.Entry<MOVE, Constants.GHOST> directionAndGhostTypeForEatableGhost: eatableGhostsDirections.entrySet()) {
+
+                    Constants.GHOST eatableGhost = directionAndGhostTypeForEatableGhost.getValue();
+                    int eatableGhostLocation = game.getGhostCurrentNodeIndex(eatableGhost);
+
+                    int pacmanAndEatableGhostDistance = game.getShortestPathDistance(currentPacmanLocation, eatableGhostLocation);
+                    int pacmanAndDangerousGhostDistance = game.getShortestPathDistance(currentPacmanLocation, dangerousGhostLocation);
+
+                    // hayalet ve pacman ayni yonde ilerliyorsa ama hayalet yenilebilir hayalete daha yakınsa
+                    int dangerousGhostAndEatableGhostDistance = game.getShortestPathDistance(dangerousGhostLocation, eatableGhostLocation);
+
+                    if (pacmanLastMove == dangerousGhostLastMove && dangerousGhostAndEatableGhostDistance < pacmanAndEatableGhostDistance ){
+                        return escapingMove;
+                    }
+
+                    // eger hayalet pacmanin uzerine dogru gelmiyorsa
+                    if (!isDangerousGhostComingTowerdsPacman(game, dangerousGhost)){
+                        return catchingMove;
+                    }
+
+                    // uzerimize dogru gelse de eger yenilebilir hayalet daha yakinsa
+                    if (pacmanAndEatableGhostDistance < pacmanAndDangerousGhostDistance){
+                        return catchingMove;
                     } else {
-                        return moveAndDistanceForDanger.getKey();
+                        return escapingMove;
                     }
                 }
             }
         }
+
         return null;
     }
 
@@ -371,9 +416,44 @@ public class MyPacMan1 extends PacmanController {
         return closestPillLocation;
     }
 
+
     public MOVE getMoveForClosestUnvisitedLocation(Game game){
         closestPillLocation = getClosestUnvisitedLocation(game);
-        return game.getNextMoveTowardsTarget(currentPacmanLocation, closestPillLocation, game.getPacmanLastMoveMade(), Constants.DM.MANHATTAN);
+        System.out.println(closestPillLocation);
+        MOVE move = game.getApproximateNextMoveTowardsTarget(currentPacmanLocation, closestPillLocation, game.getPacmanLastMoveMade(), Constants.DM.MANHATTAN);
+        return move;
+    }
+
+    // bu metod gelistirilmeli su an calismiyor zaten kopyaladim
+    public MOVE getMoveForClosestUnvisitedLocationNew(Game game){
+        closestPillLocation = getClosestUnvisitedLocation(game);
+
+        int distanceBetweenNodes = game.getShortestPathDistance(currentPacmanLocation, closestPillLocation);
+
+        int range = currentPacmanLocation - closestPillLocation;
+        int absoluteRange = Math.abs(range);
+
+        // iki konum degeri birbirinden cikarildiginda eger gercek uzakliktan daha buyuk bir deger donuyorsa
+        // bu iki node dikey duzlemde kiyaslanmalidir, ornegin ilk nodumuzun degeri 246 ikincisi de 252 olsun
+        // bu iki node arasindaki gercek uzaklik 1dir yani komsular, fakat aralarindaki fark 6, dolayisiya
+        // harita bilgisinden yola cikarak, 252 konumu 246 konumunun asagisindadir diyebiliriz -> MOVE.DOWN
+        if (absoluteRange > distanceBetweenNodes){
+
+            // pacman lokasyonu hayaletinkinden kucukse, yani hayalet asagidaysa
+            if (range < 0){
+                return MOVE.DOWN;
+            } else {
+                return MOVE.UP;
+            }
+
+        } else {
+            // bu kosulda pacman daha soldadir yani hayalet sagdadir, tehlikeli konum sag
+            if (range < 0) {
+                return MOVE.RIGHT;
+            } else {
+                return MOVE.LEFT;
+            }
+        }
     }
 
     public int getClosestAvailablePowerPillIndex(Game game){
@@ -452,7 +532,7 @@ public class MyPacMan1 extends PacmanController {
         escapingMove = getEscapingMoveFromGhosts(game);
 
         catchingMove = getPacmanCatchingMoveForGhosts(game);
-        catchingOrEscapingMove = getCatchingOrEscapingMove();
+        catchingOrEscapingMove = getCatchingOrEscapingMove(game);
 
         if (catchingOrEscapingMove != null){
             System.out.println("iki yontem arasinda kaldik");
@@ -483,11 +563,17 @@ public class MyPacMan1 extends PacmanController {
 
         if (activeTargetPill == -1){
             System.out.println("gorunurde pil yok");
+            if (game.isJunction(currentPacmanLocation)){
+                System.out.println("junction");
+            }
+            System.out.println("pacman: " + currentPacmanLocation);
             return getMoveForClosestUnvisitedLocation(game);
         }
 
 
         System.out.println("pil yeniyor");
-        return game.getNextMoveTowardsTarget(currentPacmanLocation, activeTargetPill, game.getPacmanLastMoveMade(), Constants.DM.MANHATTAN);
+        return game.getNextMoveTowardsTarget(currentPacmanLocation, activeTargetPill, Constants.DM.MANHATTAN);
+
+
     }
 }

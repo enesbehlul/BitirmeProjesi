@@ -17,3 +17,12 @@ Stats{Desc=denemeler, average=4261.6, sum=852320.0, sumsq=4.084796E9, sd=1508.01
 Stats{Desc=denemeler, average=4214.45, sum=842890.0, sumsq=4.0548275E9, sd=1589.0797872831179, n=200, min=1370.0, max=9220.0, stdErr=112.3649093434369, ms=17425}
 Stats{Desc=denemeler, average=4151.25, sum=830250.0, sumsq=3.8924039E9, sd=1496.7780933739043, n=200, min=1480.0, max=9940.0, stdErr=105.83819397561591, ms=15931}
 Stats{Desc=denemeler, average=4320.75, sum=864150.0, sumsq=4.2574771E9, sd=1622.2401960772777, n=200, min=1360.0, max=9970.0, stdErr=114.70970433596375, ms=17191}
+Stats{Desc=denemeler, average=2947.3, sum=589460.0, sumsq=2.1232204E9, sd=1392.5590881791522, n=200, min=950.0, max=7150.0, stdErr=98.46879744544339, ms=15756}
+Stats{Desc=denemeler, average=2836.05, sum=567210.0, sumsq=1.9871069E9, sd=1379.0809325753746, n=200, min=940.0, max=11490.0, stdErr=97.51574792291153, ms=15751}
+Stats{Desc=denemeler, average=654.3, sum=130860.0, sumsq=1.060902E8, sd=320.71294637081513, n=200, min=340.0, max=4670.0, stdErr=22.677829919312092, ms=5674}
+Stats{Desc=denemeler, average=1101.35, sum=220270.0, sumsq=3.316809E8, sd=669.0822316153052, n=200, min=330.0, max=4110.0, stdErr=47.31125831466105, ms=5676}
+Stats{Desc=denemeler, average=4554.1, sum=910820.0, sumsq=4.704013E9, sd=1671.5888358627249, n=200, min=1650.0, max=10570.0, stdErr=118.19918011942595, ms=17387}
+Stats{Desc=denemeler, average=4241.6, sum=848320.0, sumsq=4.1426192E9, sd=1653.965978273564, n=200, min=1650.0, max=11820.0, stdErr=116.9530559089079, ms=16895}
+Stats{Desc=denemeler, average=4145.75, sum=829150.0, sumsq=3.9711639E9, sd=1637.67712609865, n=200, min=1620.0, max=9780.0, stdErr=115.8012601258452, ms=15214}
+Stats{Desc=denemeler, average=4331.1, sum=866220.0, sumsq=4.4792076E9, sd=1912.0382426107553, n=200, min=1730.0, max=14620.0, stdErr=135.20152072380742, ms=16718}
+Stats{Desc=denemeler, average=4279.55, sum=855910.0, sumsq=4.3577759E9, sd=1868.6332568868934, n=200, min=1290.0, max=13090.0, stdErr=132.13232474954262, ms=12643}
