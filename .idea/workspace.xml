@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/belgeler/deneme00.txt" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/deneme00.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/belgeler/deneme01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/deneme01.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gorseller/18960.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gorseller/18BIN.PNG" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/GhostCommunication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/ghosts/enesbehlul/GhostCommunication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/GhostCommunication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/ghosts/enesbehlul/GhostCommunication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan1.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +41,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MsPacman/starter0-1-7-2-common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/entrants/ghosts/aggressive" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -51,6 +53,9 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
       <recent name="prediction" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\behlul\Desktop\BitirmeProjesi\src\main\java\entrants\ghosts\aggressive" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -206,7 +211,9 @@
       <workItem from="1589947081419" duration="21000" />
       <workItem from="1589947194991" duration="86000" />
       <workItem from="1589969301691" duration="20636000" />
-      <workItem from="1590073529790" duration="2314000" />
+      <workItem from="1590073529790" duration="3325000" />
+      <workItem from="1590238701489" duration="5111000" />
+      <workItem from="1590408072362" duration="26469000" />
     </task>
     <servers />
   </component>
@@ -250,38 +257,38 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="702" y="168" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1588176324822" />
-    <state width="1557" height="206" key="GridCell.Tab.0.bottom" timestamp="1590075143413">
+    <state width="1312" height="225" key="GridCell.Tab.0.bottom" timestamp="1590448131157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="206" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1590075143413" />
-    <state width="1557" height="206" key="GridCell.Tab.0.center" timestamp="1590075143413">
+    <state width="1312" height="225" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1590448131157" />
+    <state width="1312" height="225" key="GridCell.Tab.0.center" timestamp="1590448131157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="206" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1590075143413" />
-    <state width="1557" height="206" key="GridCell.Tab.0.left" timestamp="1590075143412">
+    <state width="1312" height="225" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1590448131157" />
+    <state width="1312" height="225" key="GridCell.Tab.0.left" timestamp="1590448131157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="206" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1590075143412" />
-    <state width="1557" height="206" key="GridCell.Tab.0.right" timestamp="1590075143413">
+    <state width="1312" height="225" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1590448131157" />
+    <state width="1312" height="225" key="GridCell.Tab.0.right" timestamp="1590448131157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="206" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1590075143413" />
-    <state width="1312" height="223" key="GridCell.Tab.1.bottom" timestamp="1590003327490">
+    <state width="1312" height="225" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1590448131157" />
+    <state width="1312" height="225" key="GridCell.Tab.1.bottom" timestamp="1590448131157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1312" height="223" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1590003327490" />
-    <state width="1312" height="223" key="GridCell.Tab.1.center" timestamp="1590003327490">
+    <state width="1312" height="225" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1590448131157" />
+    <state width="1312" height="225" key="GridCell.Tab.1.center" timestamp="1590448131157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1312" height="223" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1590003327490" />
-    <state width="1312" height="223" key="GridCell.Tab.1.left" timestamp="1590003327490">
+    <state width="1312" height="225" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1590448131157" />
+    <state width="1312" height="225" key="GridCell.Tab.1.left" timestamp="1590448131157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1312" height="223" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1590003327490" />
-    <state width="1312" height="223" key="GridCell.Tab.1.right" timestamp="1590003327490">
+    <state width="1312" height="225" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1590448131157" />
+    <state width="1312" height="225" key="GridCell.Tab.1.right" timestamp="1590448131157">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1312" height="223" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1590003327490" />
+    <state width="1312" height="225" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1590448131157" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1589625182002">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -322,16 +329,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java</url>
           <line>139</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java</url>
-          <line>537</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java</url>
-          <line>566</line>
-          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

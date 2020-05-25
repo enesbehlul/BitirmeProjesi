@@ -11,6 +11,8 @@ import pacman.game.Constants.*;
 import pacman.game.internal.POType;
 import pacman.game.util.Stats;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.EnumMap;
 
 
@@ -18,6 +20,8 @@ import java.util.EnumMap;
  * Created by pwillic on 06/05/2016.
  */
 public class Main {
+
+    // STANDART SAPMA VE STDERR HESAPLANACAK UNUTMA!!!
 
     public static void main(String[] args) {
         Executor executor = new Executor.Builder()
@@ -40,12 +44,15 @@ public class Main {
 
         // delay suresini kisaltarak oyunu hizlandiriyoruz
 
-        int loop = 2;
+        /*
+        ArrayList<Integer> tumSonuclar = new ArrayList<>();
+        int loop = 200;
         int totalScore = 0, currentScore = 0;
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
         for (int i = 0; i < loop; i++){
-            currentScore = executor.runGame(new MyPacMan1(), new MASController(controllers), 10);
+            currentScore = executor.runGame(new MyPacMan1(), new MASController(controllers), 0);
+            tumSonuclar.add(currentScore);
             totalScore += currentScore;
             if (currentScore > max)
                 max = currentScore;
@@ -55,18 +62,17 @@ public class Main {
         System.out.println("avarage score: "+ totalScore/loop +" Max score: " + max + " Min score: " + min);
 
 
+        calculateStatistics(tumSonuclar);
 
+         */
 
-
-
-
-        /*
-        Stats[] stats = executor.runExperiment(new MyPacMan(), new MASController(controllers), 10, "denemeler");
+        
+        Stats[] stats = executor.runExperiment(new MyPacMan(), new MASController(controllers), 200, "denemeler");
         for (int i = 0; i < stats.length; i++){
-            Executor.saveToFile(stats[i].toString(),"mypacman_" + i +".txt", false);
+            Executor.saveToFile(stats[i].toString(),"AAAmypacman_" + i +".txt", true);
         }
 
-
+/*
         Stats[] stats2 = executor.runExperiment(new MyPacMan1(), new MASController(controllers), 200, "denemeler");
         for (int i = 0; i < stats2.length; i++){
             Executor.saveToFile(stats2[i].toString(),"belgeler/deneme0" + i +".txt", true);
@@ -100,5 +106,17 @@ public class Main {
         */
 
         //executor.replayGame("replays/56. statsFile.txt", true);
+    }
+
+    public static void calculateStatistics(ArrayList<Integer> tumSonuclar){
+        int len = tumSonuclar.size();
+        int median = 0;
+        Collections.sort(tumSonuclar);
+        if (len %2 == 0){
+            median = (tumSonuclar.get((len-1)/2) + tumSonuclar.get(len/2))/2;
+        } else{
+            median = tumSonuclar.get(((len-1)/2));
+        }
+        System.out.println("Median = " + median);
     }
 }
