@@ -11,6 +11,8 @@ import pacman.game.Constants.*;
 import pacman.game.internal.POType;
 import pacman.game.util.Stats;
 
+import javax.swing.*;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.EnumMap;
@@ -38,35 +40,48 @@ public class Main {
         controllers.put(GHOST.PINKY, new Pinky());
         controllers.put(GHOST.SUE, new Sue());
 
+        //createListFromFile();
+
         //executor.runGame(new MyPacMan(), new MASController(controllers), 3);
         // Pacmani klavyeden yonetebilmek icin
         //executor.runGame(new KlavyeKontrol(new KeyBoardInput()), new MASController(controllers), 40);
 
         // delay suresini kisaltarak oyunu hizlandiriyoruz
 
-        /*
+
         ArrayList<Integer> tumSonuclar = new ArrayList<>();
-        int loop = 200;
+        int loop = 100 ;
         int totalScore = 0, currentScore = 0;
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
+        int avarage;
+        int maxIndex = -1;
         for (int i = 0; i < loop; i++){
             currentScore = executor.runGame(new MyPacMan1(), new MASController(controllers), 0);
             tumSonuclar.add(currentScore);
             totalScore += currentScore;
-            if (currentScore > max)
+            if (currentScore > max){
                 max = currentScore;
+                JOptionPane.showMessageDialog(new JFrame()," " + max);
+                maxIndex=i;
+            }
+
             if(currentScore < min)
                 min = currentScore;
         }
-        System.out.println("avarage score: "+ totalScore/loop +" Max score: " + max + " Min score: " + min);
+        avarage = totalScore/loop;
+        System.out.println("avarage score: "+ avarage +" Max score: " + max + " Min score: " + min + " " + maxIndex);
 
 
-        calculateStatistics(tumSonuclar);
+        calculateStatistics(tumSonuclar, avarage);
+        System.out.println(calculateStandardDeviation(tumSonuclar, avarage));
+        printResultsToAFile(tumSonuclar, "tumSonuclarSirali.txt");
 
-         */
 
-        
+
+
+
+        /*
         Stats[] stats = executor.runExperiment(new MyPacMan(), new MASController(controllers), 200, "denemeler");
         for (int i = 0; i < stats.length; i++){
             Executor.saveToFile(stats[i].toString(),"AAAmypacman_" + i +".txt", true);
@@ -108,15 +123,78 @@ public class Main {
         //executor.replayGame("replays/56. statsFile.txt", true);
     }
 
-    public static void calculateStatistics(ArrayList<Integer> tumSonuclar){
+    static void createListFromFile(){
+        ArrayList<Integer> sonuclar = new ArrayList<>();
+        try {
+            BufferedReader input = new BufferedReader(new FileReader("tumSonuclarSirali.txt"));
+
+            String satir;
+            while ((satir = input.readLine()) != null) {
+                int score = Integer.parseInt(satir);
+                sonuclar.add(score);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        int ort = calculateMean(sonuclar);
+        double std = calculateStandardDeviation(sonuclar, ort);
+        System.out.println("Ortalama: " + ort + " std: " + std);
+
+    }
+
+    static int calculateMean(ArrayList<Integer> tumSonuclar){
+        int toplam = 0;
+
+        for (int score : tumSonuclar){
+            toplam += score;
+        }
+
+        return toplam/tumSonuclar.size();
+    }
+
+    public static void calculateStatistics(ArrayList<Integer> tumSonuclar , int mean){
+        int median = calculateMedian(tumSonuclar);
+        System.out.println("Median = " + median);
+        double std = calculateStandardDeviation(tumSonuclar, mean);
+        System.out.println(std + ": Standart dev");
+    }
+
+    public static int calculateMedian(ArrayList<Integer> tumSonuclar){
         int len = tumSonuclar.size();
-        int median = 0;
+
         Collections.sort(tumSonuclar);
         if (len %2 == 0){
-            median = (tumSonuclar.get((len-1)/2) + tumSonuclar.get(len/2))/2;
+            return  (tumSonuclar.get((len-1)/2) + tumSonuclar.get(len/2))/2;
         } else{
-            median = tumSonuclar.get(((len-1)/2));
+            return tumSonuclar.get(((len-1)/2));
         }
-        System.out.println("Median = " + median);
     }
+
+    public static double calculateStandardDeviation(ArrayList<Integer> tumSonuclar, int ortalama){
+
+        double farklarinKarelerininToplami = 0;
+
+        for (int sonuc : tumSonuclar){
+            farklarinKarelerininToplami += Math.pow((sonuc-ortalama),2);
+        }
+        double varyans = farklarinKarelerininToplami/tumSonuclar.size();
+        return Math.sqrt(varyans);
+    }
+
+    public static void printResultsToAFile(ArrayList<Integer> tumSonuclar, String fileName){
+        Collections.sort(tumSonuclar);
+        try {
+            PrintWriter output = new PrintWriter(new FileWriter(fileName, true));
+            for (int sonuc : tumSonuclar){
+                output.println(sonuc);
+            }
+            output.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
