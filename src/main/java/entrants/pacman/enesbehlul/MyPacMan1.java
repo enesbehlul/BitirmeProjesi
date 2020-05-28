@@ -40,7 +40,7 @@ public class MyPacMan1 extends PacmanController {
     static int closestPillDistance;
     int currentLevel = 0;
 
-    int closestEatableGhostLastSeenLocation;
+    boolean isEveryPowerPillEaten = false;
 
     long startTime, stopTime, elapsedTime;
 
@@ -320,6 +320,15 @@ public class MyPacMan1 extends PacmanController {
                 return closestPowerPillMove;
             }
 
+            MOVE closestPillMove = null;
+            if (isEveryPowerPillEaten){
+                closestPillMove = getMoveForClosestUnvisitedLocation(game);
+                if (!dangerousDirections.containsKey(closestPillMove)){
+                    System.out.println("Butun guc pilleri tukendi, yenmemis pile yonelindi");
+                    return closestPillMove;
+                }
+            }
+
             Random random = new Random();
             // dongu sayisi 100 cunku rastgele bir guvenli yone kacmak isyorum 100 denemeye kadar
             // sanirim mutlaka tehlikesiz bir yon bulunur (yuzde 99.9) xd
@@ -526,8 +535,11 @@ public class MyPacMan1 extends PacmanController {
 
     public MOVE getMoveForClosestAvailablePowerPill(Game game){
         int index = getClosestAvailablePowerPillIndex(game);
-        if (index == -1)
+        if (index == -1){
+            isEveryPowerPillEaten = true;
             return null;
+        }
+
 
         return game.getNextMoveTowardsTarget(currentPacmanLocation, index, game.getPacmanLastMoveMade(), Constants.DM.MANHATTAN);
     }
@@ -556,6 +568,7 @@ public class MyPacMan1 extends PacmanController {
                 return tempMove;
             }
 
+            // kod buraya ulastiysa tum hayaletler uzerimize geliyor demektir
             junctionIndexAndClosestGhostDistanceToJunction.clear();
             setJunctionsForEscaping(game);
             if (!junctionIndexAndClosestGhostDistanceToJunction.isEmpty()){
@@ -571,7 +584,6 @@ public class MyPacMan1 extends PacmanController {
                 return game.getNextMoveTowardsTarget(currentPacmanLocation, closestJunctionIndex, Constants.DM.MANHATTAN);
             }
 
-            // kod buraya ulastiysa tum hayaletler uzerimize geliyor demektir
             for (Map.Entry<MOVE, Constants.GHOST> moveAndGhost: dangerousDirections.entrySet()) {
                 distanceBetweenPacmanAndGhost = game.getShortestPathDistance(currentPacmanLocation, game.getGhostCurrentNodeIndex(moveAndGhost.getValue()));
                 if (tempGhostDistance < distanceBetweenPacmanAndGhost){
@@ -591,6 +603,7 @@ public class MyPacMan1 extends PacmanController {
             System.out.println("***YENI LEVEL'A GECILDI***");
 
             visitedLocations.clear();
+            isEveryPowerPillEaten = false;
             System.out.println("Ziyaret edilen konumlar dizisi sifirlandi.");
         }
     }
@@ -649,7 +662,6 @@ public class MyPacMan1 extends PacmanController {
         }
 
         if (catchingMove != null){
-            System.out.println("hayalet kovalaniyor");
             return catchingMove;
         }
 

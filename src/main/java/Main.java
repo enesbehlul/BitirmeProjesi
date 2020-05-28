@@ -57,17 +57,18 @@ public class Main {
         int avarage;
         int maxIndex = -1;
         for (int i = 0; i < loop; i++){
-            currentScore = executor.runGame(new MyPacMan1(), new MASController(controllers), 0);
+            currentScore = executor.runGame(new MyPacMan1(), new MASController(controllers), 10);
             tumSonuclar.add(currentScore);
             totalScore += currentScore;
             if (currentScore > max){
                 max = currentScore;
-                JOptionPane.showMessageDialog(new JFrame()," " + max);
                 maxIndex=i;
             }
 
             if(currentScore < min)
                 min = currentScore;
+            avarage = totalScore / (i+1);
+            System.out.println((i+1) +". game, avarage: "+ avarage + " max score: " + max);
         }
         avarage = totalScore/loop;
         System.out.println("avarage score: "+ avarage +" Max score: " + max + " Min score: " + min + " " + maxIndex);
