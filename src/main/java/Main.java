@@ -1,7 +1,7 @@
 
-//import entrants.ghosts.enesbehlul.*;
+import entrants.ghosts.enesbehlul.*;
 //import examples.StarterPacMan.*;
-import examples.StarterGhost.*;
+//import examples.StarterGhost.*;
 import entrants.pacman.enesbehlul.*;
 import pacman.Executor;
 import pacman.controllers.IndividualGhostController;
@@ -50,14 +50,14 @@ public class Main {
 
 
         ArrayList<Integer> tumSonuclar = new ArrayList<>();
-        int loop = 100 ;
+        int loop = 100;
         int totalScore = 0, currentScore = 0;
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
         int avarage;
         int maxIndex = -1;
         for (int i = 0; i < loop; i++){
-            currentScore = executor.runGame(new MyPacMan1(), new MASController(controllers), 10);
+            currentScore = executor.runGame(new MyPacMan1(), new MASController(controllers), 0);
             tumSonuclar.add(currentScore);
             totalScore += currentScore;
             if (currentScore > max){
