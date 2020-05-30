@@ -1,7 +1,7 @@
 
-import entrants.ghosts.enesbehlul.*;
+//import entrants.ghosts.enesbehlul.*;
 //import examples.StarterPacMan.*;
-//import examples.StarterGhost.*;
+import examples.StarterGhostComm.*;
 import entrants.pacman.enesbehlul.*;
 import pacman.Executor;
 import pacman.controllers.IndividualGhostController;
@@ -23,8 +23,6 @@ import java.util.EnumMap;
  */
 public class Main {
 
-    // STANDART SAPMA VE STDERR HESAPLANACAK UNUTMA!!!
-
     public static void main(String[] args) {
         Executor executor = new Executor.Builder()
                 .setVisual(true)
@@ -40,25 +38,26 @@ public class Main {
         controllers.put(GHOST.PINKY, new Pinky());
         controllers.put(GHOST.SUE, new Sue());
 
-        //createListFromFile();
+        Statistics statistics = new Statistics();
+
+        statistics.calculateStatisticsFromFile("belgeler/1000tumSonuclarSirali32330.txt");
 
         //executor.runGame(new MyPacMan(), new MASController(controllers), 3);
         // Pacmani klavyeden yonetebilmek icin
         //executor.runGame(new KlavyeKontrol(new KeyBoardInput()), new MASController(controllers), 40);
 
-        // delay suresini kisaltarak oyunu hizlandiriyoruz
+        /*
 
 
-        ArrayList<Integer> tumSonuclar = new ArrayList<>();
-        int loop = 100;
+        int loop = 10;
         int totalScore = 0, currentScore = 0;
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
-        int avarage;
+        int average;
         int maxIndex = -1;
         for (int i = 0; i < loop; i++){
             currentScore = executor.runGame(new MyPacMan1(), new MASController(controllers), 0);
-            tumSonuclar.add(currentScore);
+            statistics.tumSonuclar.add(currentScore);
             totalScore += currentScore;
             if (currentScore > max){
                 max = currentScore;
@@ -67,16 +66,18 @@ public class Main {
 
             if(currentScore < min)
                 min = currentScore;
-            avarage = totalScore / (i+1);
-            System.out.println((i+1) +". game, avarage: "+ avarage + " max score: " + max);
+            average = totalScore / (i+1);
+            System.out.println((i+1) +". game, average: "+ average + " max score: " + max + " min score: " + min);
         }
-        avarage = totalScore/loop;
-        System.out.println("avarage score: "+ avarage +" Max score: " + max + " Min score: " + min + " " + maxIndex);
+        average = totalScore/loop;
+        System.out.println("average score: "+ average +" Max score: " + max + " Min score: " + min + " Max score order:" + maxIndex);
 
 
-        calculateStatistics(tumSonuclar, avarage);
-        System.out.println(calculateStandardDeviation(tumSonuclar, avarage));
-        printResultsToAFile(tumSonuclar, "tumSonuclarSirali.txt");
+        Statistics.calculateStatistics();
+
+        printResultsToAFile(statistics.tumSonuclar, "tumSonuclarSirali.txt");
+
+         */
 
 
 
@@ -118,72 +119,13 @@ public class Main {
             if(currentScore < min)
                 min = currentScore;
         }
-        System.out.println(maxIndex + ". index, max score "+ max + " avarage: " + totalScore/100);
+        System.out.println(maxIndex + ". index, max score "+ max + " average: " + totalScore/100);
         */
 
         //executor.replayGame("replays/56. statsFile.txt", true);
     }
 
-    static void createListFromFile(){
-        ArrayList<Integer> sonuclar = new ArrayList<>();
-        try {
-            BufferedReader input = new BufferedReader(new FileReader("tumSonuclarSirali.txt"));
 
-            String satir;
-            while ((satir = input.readLine()) != null) {
-                int score = Integer.parseInt(satir);
-                sonuclar.add(score);
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        int ort = calculateMean(sonuclar);
-        double std = calculateStandardDeviation(sonuclar, ort);
-        System.out.println("Ortalama: " + ort + " std: " + std);
-
-    }
-
-    static int calculateMean(ArrayList<Integer> tumSonuclar){
-        int toplam = 0;
-
-        for (int score : tumSonuclar){
-            toplam += score;
-        }
-
-        return toplam/tumSonuclar.size();
-    }
-
-    public static void calculateStatistics(ArrayList<Integer> tumSonuclar , int mean){
-        int median = calculateMedian(tumSonuclar);
-        System.out.println("Median = " + median);
-        double std = calculateStandardDeviation(tumSonuclar, mean);
-        System.out.println(std + ": Standart dev");
-    }
-
-    public static int calculateMedian(ArrayList<Integer> tumSonuclar){
-        int len = tumSonuclar.size();
-
-        Collections.sort(tumSonuclar);
-        if (len %2 == 0){
-            return  (tumSonuclar.get((len-1)/2) + tumSonuclar.get(len/2))/2;
-        } else{
-            return tumSonuclar.get(((len-1)/2));
-        }
-    }
-
-    public static double calculateStandardDeviation(ArrayList<Integer> tumSonuclar, int ortalama){
-
-        double farklarinKarelerininToplami = 0;
-
-        for (int sonuc : tumSonuclar){
-            farklarinKarelerininToplami += Math.pow((sonuc-ortalama),2);
-        }
-        double varyans = farklarinKarelerininToplami/tumSonuclar.size();
-        return Math.sqrt(varyans);
-    }
 
     public static void printResultsToAFile(ArrayList<Integer> tumSonuclar, String fileName){
         Collections.sort(tumSonuclar);

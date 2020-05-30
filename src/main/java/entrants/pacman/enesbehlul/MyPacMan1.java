@@ -245,7 +245,7 @@ public class MyPacMan1 extends PacmanController {
             // o yone donelim degilse rastgele yon secimi bir sonraki adimda
             MOVE closestPowerPillMove = getMoveForClosestAvailablePowerPill(game);
             if (closestPowerPillMove != null && !dangerousDirectionAndGhostMap.containsKey(closestPowerPillMove)){
-              //  System.out.println("hayalet goruldu, en yakindaki power pille yonelindi");
+                System.out.println("hayalet goruldu, en yakindaki power pille yonelindi");
                 return closestPowerPillMove;
             }
 
@@ -253,7 +253,7 @@ public class MyPacMan1 extends PacmanController {
             if (isEveryPowerPillEaten){
                 closestPillMove = getMoveForClosestUnvisitedLocation(game);
                 if (!dangerousDirectionAndGhostMap.containsKey(closestPillMove)){
-                   // System.out.println("Butun guc pilleri tukendi, yenmemis pile yonelindi");
+                    System.out.println("Butun guc pilleri tukendi, yenmemis pile yonelindi");
                     return closestPillMove;
                 }
             }
@@ -264,7 +264,7 @@ public class MyPacMan1 extends PacmanController {
             for (int i = 0; i < 100; i++){
                 int rand = random.nextInt(game.getPossibleMoves(currentPacmanLocation).length);
                 if (!dangerousDirectionAndGhostMap.containsKey(game.getPossibleMoves(currentPacmanLocation)[rand])){
-                 //   System.out.println("En yakindaki power pile gidemiyoruz");
+                    System.out.println("En yakindaki power pile gidemiyoruz");
                     return game.getPossibleMoves(currentPacmanLocation)[rand];
                 }
             }
@@ -441,7 +441,7 @@ public class MyPacMan1 extends PacmanController {
                     tempMove = moveAndGhost.getKey();
                 }
             }
-            //System.out.println("Etrafimiz sarildi...");
+            System.out.println("Etrafimiz sarildi...");
             return tempMove;
         }
         return null;
@@ -450,11 +450,11 @@ public class MyPacMan1 extends PacmanController {
     private void checkState(Game game){
         if (currentLevel != game.getCurrentLevel()){
             currentLevel++;
-            //System.out.println("***YENI LEVEL'A GECILDI***");
+            System.out.println("***YENI LEVEL'A GECILDI***");
 
             visitedLocations.clear();
             isEveryPowerPillEaten = false;
-            //System.out.println("Ziyaret edilen konumlar dizisi sifirlandi.");
+            System.out.println("Ziyaret edilen konumlar dizisi sifirlandi.");
         }
     }
 
@@ -491,7 +491,7 @@ public class MyPacMan1 extends PacmanController {
         catchingOrEscapingMove = getCatchingOrEscapingMove(game);
 
         if (catchingOrEscapingMove != null){
-            //System.out.println("iki yontem arasinda kaldik");
+            System.out.println("iki yontem arasinda kaldik");
             return catchingOrEscapingMove;
         }
 

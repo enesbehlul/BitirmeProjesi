@@ -247,6 +247,4 @@ public class GhostCommunication extends IndividualGhostController {
         return null;
         */
     }
-
-
 }
