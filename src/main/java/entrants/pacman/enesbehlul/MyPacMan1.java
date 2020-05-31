@@ -90,7 +90,7 @@ public class MyPacMan1 extends PacmanController {
         }
     }
 
-    private MOVE getMoveForClosestEdibleGhostLocation(Game game){
+    private MOVE getMoveForClosestEdibleGhost(Game game){
         setEdibleGhostDirectionAndGhostMap(game);
 
         int distanceBetweenPacmanAndEdibleGhost, edibleTime, lairTime;
@@ -275,7 +275,7 @@ public class MyPacMan1 extends PacmanController {
     private MOVE getPacmanCatchingMoveForGhosts(Game game){
 
         //en yakindaki hayaleti yemek icin
-        MOVE closestMoveForEdibleGhost = getMoveForClosestEdibleGhostLocation(game);
+        MOVE closestMoveForEdibleGhost = getMoveForClosestEdibleGhost(game);
 
         if (closestMoveForEdibleGhost != null){
             return closestMoveForEdibleGhost; //game.getNextMoveTowardsTarget(currentPacmanLocation, closestGhostLocation, Constants.DM.MANHATTAN);
@@ -312,6 +312,8 @@ public class MyPacMan1 extends PacmanController {
                     int distanceBetweenPacmanAndEdibleGhost = game.getShortestPathDistance(currentPacmanLocation, edibleGhostLocation);
                     int distanceBetweenPacmanAndDangerousGhost = game.getShortestPathDistance(currentPacmanLocation, dangerousGhostLocation);
 
+                    // bu kontrolu yapiyorum cunku, pacman yenilebilir hayaleti kovalarken, uzerine tehlikeli hayalet gelebilir
+                    // ve pacman yenilebilir hayalete daha yakin oldugu icin kacis stratejisini uygulamayabilir
                     if (pacmanLastMove == dangerousGhostLastMove){
                         // hayalet ve pacman ayni yonde ilerliyorsa ve pacman yenilebilir hayalete daha yakinsa
                         if (distanceBetweenPacmanAndEdibleGhost < distanceBetweenPacmanAndDangerousGhost ){
@@ -328,6 +330,10 @@ public class MyPacMan1 extends PacmanController {
                     }
 
                     // uzerimize dogru gelse de eger yenilebilir hayalet daha yakinsa
+                    // BURASI GELISTIRILMELI UNUTMA, yukarida bu kontrolu zaten yapiyoruz burda bunu yapmak
+                    // gereksiz olmus, burada yenilebilir hayaletin hizi yariya indiginden pacman ile hayaletler
+                    // arasindaki mesafeleri dogrudan buyukluk acisindan kiyaslamak yanlis olur,
+                    // tehlikeli hayalete olan uzakligimiz, yenilebilire olan uzakligin iki katiysa vs gibi olsun
                     if (distanceBetweenPacmanAndEdibleGhost < distanceBetweenPacmanAndDangerousGhost){
                         return catchingMove;
                     } else {
