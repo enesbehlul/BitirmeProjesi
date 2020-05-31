@@ -1,4 +1,6 @@
 package entrants.ghosts.enesbehlul;
+
+
 import pacman.controllers.IndividualGhostController;
 import pacman.game.Constants;
 import pacman.game.Game;
@@ -23,9 +25,6 @@ public class GhostCommunication extends IndividualGhostController {
     private static int currentLevel = 0 ;
     public Constants.GHOST ghostType;
     public int currentGhostLocation;
-
-
-    private int pacmanLocation;
 
     Messenger messenger;
 
@@ -68,13 +67,42 @@ public class GhostCommunication extends IndividualGhostController {
         //pacmani gordugumuzde konumunun en yakın olduğu powerpill yenmişse diğer hayaletleri üzerine salalım
         //timer ekle bakalım 40 ms yi geçiyor mu!!!!!
 
-        //burası pilerin tutulduğu yer
 
-
-
-        Constants.GHOST myType = this.ghostType;
+        //1292 baslangıc noktası
         currentGhostLocation = game.getGhostCurrentNodeIndex(this.ghostType);
+        //bunu current maze loc çalışmadığı için yaptım
 
+
+        if (GhostCommunication.protectedPowerPill == null || GhostCommunication.protectedPowerPill == null || game.gameOver() == true || game.getTotalTime() == 0){
+
+            copyPowerPillIndicesArray(game.getPowerPillIndices());
+            GhostCommunication.protectedPowerPill = new Constants.GHOST[GhostCommunication.powerPillIndices.length];
+            GhostCommunication.availablePillsIndices.clear();
+            GhostCommunication.eatedPowerPillsIndices.clear();
+            if(game.gameOver() || game.getTotalTime() == 0 ){
+                GhostCommunication.currentLevel = 0;
+            }
+        }
+
+        //yeni level kontrolü
+        if (GhostCommunication.currentLevel != game.getCurrentLevel() ) {
+            GhostCommunication.currentLevel++;
+            System.out.println("YENI LEVEL'A GECILDI");
+            GhostCommunication.availablePillsIndices.clear();
+            GhostCommunication.eatedPowerPillsIndices.clear();
+            copyPowerPillIndicesArray(game.getPowerPillIndices());
+            GhostCommunication.protectedPowerPill = new Constants.GHOST[GhostCommunication.powerPillIndices.length];
+            myDestinationReason = "";
+            myDestinition = -1;
+        }
+
+
+        if ( (1292 == currentGhostLocation && currentLevel == 0) || (currentLevel ==1 && 1318 == currentGhostLocation) ){
+            System.out.println("I am at MAZEEE!!!!");
+            return null;
+        }
+
+        //burası pillerin tutulduğu yer
         int pillIndex = getPillIndex(game.getPillIndices(), currentGhostLocation);
         if (pillIndex != -1) {
             //System.out.println("ghost konumu: " + currentGhostLocation);
@@ -95,13 +123,9 @@ public class GhostCommunication extends IndividualGhostController {
 
         //----- buraya kadar -----
 
-        //1292 baslangıc noktası
 
-        pacmanLocation = game.getPacmanCurrentNodeIndex();
-        copyPowerPillIndicesArray(game.getPowerPillIndices());
-        if (GhostCommunication.protectedPowerPill == null)
-            GhostCommunication.protectedPowerPill = new Constants.GHOST[GhostCommunication.powerPillIndices.length];
         /**/
+        //secound guardian için mydes belirleme
         if (GhostCommunication.eatedPowerPillsIndices.contains(myDestinition)) {
             myDestinition = -1;
             myDestinationReason = "";
@@ -113,13 +137,7 @@ public class GhostCommunication extends IndividualGhostController {
                 }
             }
         }
-        if (currentLevel != game.getCurrentLevel()) {
-            currentLevel++;
-            System.out.println("**YENI LEVEL'A GECILDI**");
-            GhostCommunication.protectedPowerPill = new Constants.GHOST[GhostCommunication.powerPillIndices.length];
-            myDestinationReason = "";
-            myDestinition = -1;
-        }
+
 
 
 
@@ -142,19 +160,6 @@ public class GhostCommunication extends IndividualGhostController {
             myDestinationReason = "";
             myDestinition = -1;
         }
-        if (GhostCommunication.isPacmanSeen) {
-            if (GhostCommunication.kovalamaTimeOut == 5 * 4) {
-                //bu şey demekbir kere gördük ama artık görmüyorsak
-                myDestinition = -1;
-                GhostCommunication.isPacmanSeen = false;
-                myDestinationReason = "we couldnt see any more";
-            } else {
-                GhostCommunication.kovalamaTimeOut++;
-                leavePowerPillTarget();
-                myDestinition = GhostCommunication.lastPacmanLocation;
-                myDestinationReason = "Someone saw pacmen";
-            }
-        }
 
         //eğer birisi görürse zaten tekrar görünür kılar
         if (game.getPacmanCurrentNodeIndex() != -1) {
@@ -172,13 +177,37 @@ public class GhostCommunication extends IndividualGhostController {
             GhostCommunication.kovalamaTimeOut = 0;
 
         }
+
+        if (GhostCommunication.isPacmanSeen) {
+
+            if (GhostCommunication.kovalamaTimeOut == 4 * 4) {
+                //bu şey demek bir kere gördük ama artık görmüyorsak
+                myDestinition = -1;
+                GhostCommunication.isPacmanSeen = false;
+                myDestinationReason = "we couldnt see any more";
+            }
+            else {
+                GhostCommunication.kovalamaTimeOut++;
+                leavePowerPillTarget();
+                myDestinition = GhostCommunication.lastPacmanLocation;
+                myDestinationReason = "Someone saw pacmen";
+            }
+            if(game.isGhostEdible(this.ghostType)){
+
+
+            }
+        }
+
+
+
+
         // artık hala hedeyif yoksa en yakın korunmayan Power Pill i korumaya gitmelyim
         if (myDestinition == -1) {
             for (int i = 0; i < GhostCommunication.powerPillIndices.length; i++) {
                 if(GhostCommunication.powerPillIndices[i] == -1) {
                     continue;
                 }
-                if (GhostCommunication.protectedPowerPill[i] != null && GhostCommunication.eatedPowerPillsIndices.size()>0 ){
+                if (GhostCommunication.protectedPowerPill[i] != null && GhostCommunication.eatedPowerPillsIndices.size()>0 && countNonProtectedPowerPills() == GhostCommunication.eatedPowerPillsIndices.size() ){
                     myDestinition = GhostCommunication.powerPillIndices[i];
                     myDestinationReason = "Closest Power Pill, I am second guardian";
                     break;
@@ -198,19 +227,32 @@ public class GhostCommunication extends IndividualGhostController {
         asagıda en yakın nromal fill i buluyorum ve ona gönlendiriyorum adamı
 
          */
-        if (myDestinition == -1){
+        int _pillIndex = -1;
+        int min = 9999, targetPill = -1;
+        try {
+            if (myDestinition == -1) {
 
-            int min = 9999, targetPill = -1;
-            for (int i=0 ; i< GhostCommunication.availablePillsIndices.size(); i++) {
-                int _pillIndex = (int) GhostCommunication.availablePillsIndices.toArray()[i];
-                if ( game.getShortestPath( currentGhostLocation, _pillIndex).length <= min  ){
-                    targetPill = _pillIndex;
+                for (int i = 0; i < GhostCommunication.availablePillsIndices.size(); i++) {
+                    _pillIndex = (int) GhostCommunication.availablePillsIndices.toArray()[i];
+                    if (_pillIndex > 0) {
+
+                        if (game.getShortestPath(currentGhostLocation, _pillIndex).length <= min) {
+                            targetPill = _pillIndex;
+                            myDestinition = targetPill;
+                            myDestinationReason = "Closest normal Pill";
+                        }
+                    }
                 }
-                myDestinition = targetPill;
-            }
 
-            myDestinationReason =  "Closest normal Pill";
+            }
+        }catch (Exception e){
+            System.out.println("HATAAA");
+            System.out.println("currentGhostLocation" + currentGhostLocation);
+            System.out.println("_pillIndex" + _pillIndex);
+            System.out.println(e);
+            return null;
         }
+        System.out.println(GhostCommunication.eatedPowerPillsIndices);
         String txt = String.format("IAM %8s, IAM at %5d, My Destination %5d , Reason : %20s", this.ghostType, currentGhostLocation, myDestinition, myDestinationReason);
         System.out.println(txt);
 
@@ -226,19 +268,29 @@ public class GhostCommunication extends IndividualGhostController {
             }
         }
     }
+    public int countNonProtectedPowerPills(){
+        int count = 0 ;
+        for(int i = 0 ; i< GhostCommunication.protectedPowerPill.length;i++){
+            if(GhostCommunication.protectedPowerPill[i] == null){
+                count++;
+            }
+        }
+        return count;
+    }
 
 
-
-    public Constants.MOVE go_there( int myLoc, int Des, Game game){
+    public Constants.MOVE go_there( int myLoc, int Des, Game game) {
         if (Des == -1)
             return null;
-        try{myDestinitionPath = game.getShortestPath(myLoc, Des);}
-        catch (Exception e){
+        try {
+            myDestinitionPath = game.getShortestPath(myLoc, Des);
+        } catch (Exception e) {
             int a = 5;
         }
-        if( game.isGhostEdible(this.ghostType) )
-            return game.getApproximateNextMoveAwayFromTarget(myLoc, Des, game.getGhostLastMoveMade(this.ghostType),Constants.DM.MANHATTAN);
-        return game.getNextMoveTowardsTarget(myLoc, Des, game.getGhostLastMoveMade(this.ghostType),Constants.DM.MANHATTAN);
+        if (game.isGhostEdible(this.ghostType))
+            return game.getNextMoveAwayFromTarget(myLoc, Des, game.getGhostLastMoveMade(this.ghostType), Constants.DM.MANHATTAN);
+        return game.getNextMoveTowardsTarget(myLoc, Des, game.getGhostLastMoveMade(this.ghostType), Constants.DM.EUCLID);
+
         /*
         for(int i = 0 ; i< myDestinitionPath.length ; i++){
             if (game.isJunction(myDestinitionPath[i]))
@@ -247,4 +299,8 @@ public class GhostCommunication extends IndividualGhostController {
         return null;
         */
     }
+
+
+
+
 }
