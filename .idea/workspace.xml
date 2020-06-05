@@ -3,10 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/belgeler/GANTT CHART.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/GANTT CHART.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/belgeler/Tez/MsPacManBitirmeTeziFormatliNihai.docx" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/Tez/MsPacManBitirmeTeziFormatliNihai.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/belgeler/Tez/MsPacManBitirmeTeziFormatliNihai.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/Tez/MsPacManBitirmeTeziFormatliNihai.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Statistics.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Statistics.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tumSonuclarSirali.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tumSonuclarSirali.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan1.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,6 +234,7 @@
       <workItem from="1590955654664" duration="39000" />
       <workItem from="1591088441428" duration="684000" />
       <workItem from="1591102338877" duration="12127000" />
+      <workItem from="1591178418296" duration="15113000" />
     </task>
     <servers />
   </component>
@@ -272,38 +278,38 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="702" y="168" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1588176324822" />
-    <state width="685" height="197" key="GridCell.Tab.0.bottom" timestamp="1591120728275">
+    <state width="1557" height="199" key="GridCell.Tab.0.bottom" timestamp="1591233212288">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="685" height="197" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1591120728275" />
-    <state width="685" height="197" key="GridCell.Tab.0.center" timestamp="1591120728275">
+    <state width="1557" height="199" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1591233212288" />
+    <state width="1557" height="199" key="GridCell.Tab.0.center" timestamp="1591233212288">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="685" height="197" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1591120728275" />
-    <state width="685" height="197" key="GridCell.Tab.0.left" timestamp="1591120728275">
+    <state width="1557" height="199" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1591233212288" />
+    <state width="1557" height="199" key="GridCell.Tab.0.left" timestamp="1591233212288">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="685" height="197" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1591120728275" />
-    <state width="685" height="197" key="GridCell.Tab.0.right" timestamp="1591120728275">
+    <state width="1557" height="199" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1591233212288" />
+    <state width="1557" height="199" key="GridCell.Tab.0.right" timestamp="1591233212288">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="685" height="197" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1591120728275" />
-    <state width="1557" height="227" key="GridCell.Tab.1.bottom" timestamp="1591120728267">
+    <state width="1557" height="199" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1591233212288" />
+    <state width="1557" height="227" key="GridCell.Tab.1.bottom" timestamp="1591233212257">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="227" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1591120728267" />
-    <state width="1557" height="227" key="GridCell.Tab.1.center" timestamp="1591120728267">
+    <state width="1557" height="227" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1591233212257" />
+    <state width="1557" height="227" key="GridCell.Tab.1.center" timestamp="1591233212256">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="227" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1591120728267" />
-    <state width="1557" height="227" key="GridCell.Tab.1.left" timestamp="1591120728267">
+    <state width="1557" height="227" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1591233212256" />
+    <state width="1557" height="227" key="GridCell.Tab.1.left" timestamp="1591233212256">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="227" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1591120728267" />
-    <state width="1557" height="227" key="GridCell.Tab.1.right" timestamp="1591120728267">
+    <state width="1557" height="227" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1591233212256" />
+    <state width="1557" height="227" key="GridCell.Tab.1.right" timestamp="1591233212256">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="227" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1591120728267" />
+    <state width="1557" height="227" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1591233212256" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1589625182002">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -328,6 +334,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="530" y="191" key="extract.method.dialog/0.0.1600.860@0.0.1600.860" timestamp="1589547389731" />
+    <state x="643" y="187" key="refactoring.ChangeSignatureDialog" timestamp="1591208144995">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="643" y="187" key="refactoring.ChangeSignatureDialog/0.0.1600.860@0.0.1600.860" timestamp="1591208144995" />
     <state x="456" y="195" key="run.anything.popup" timestamp="1590755056731">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -342,13 +352,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java</url>
-          <line>139</line>
+          <line>174</line>
           <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java</url>
-          <line>495</line>
-          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

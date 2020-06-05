@@ -1,15 +1,14 @@
 
 //import entrants.ghosts.enesbehlul.*;
-//import examples.StarterPacMan.*;
-import examples.StarterGhostComm.*;
-import entrants.pacman.enesbehlul.*;
+import examples.StarterNNPacMan.NeuralNet;
+import examples.StarterNNPacMan.examples.*;
+import examples.StarterGhost.*;
+//import entrants.pacman.enesbehlul.*;
 import pacman.Executor;
 import pacman.controllers.IndividualGhostController;
-import pacman.controllers.KeyBoardInput;
 import pacman.controllers.MASController;
 import pacman.game.Constants.*;
-import pacman.game.internal.POType;
-import pacman.game.util.Stats;
+
 
 import javax.swing.*;
 import java.io.*;
@@ -40,28 +39,29 @@ public class Main {
 
         Statistics statistics = new Statistics();
 
-        statistics.calculateStatisticsFromFile("belgeler/1000tumSonuclarSirali32330.txt");
+        //statistics.calculateStatisticsFromFile("belgeler/1000tumSonuclarSirali32330.txt");
 
         //executor.runGame(new MyPacMan(), new MASController(controllers), 3);
         // Pacmani klavyeden yonetebilmek icin
         //executor.runGame(new KlavyeKontrol(new KeyBoardInput()), new MASController(controllers), 40);
 
-        /*
 
 
-        int loop = 10;
+
+        int loop = 1000;
         int totalScore = 0, currentScore = 0;
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
         int average;
         int maxIndex = -1;
         for (int i = 0; i < loop; i++){
-            currentScore = executor.runGame(new MyPacMan1(), new MASController(controllers), 0);
+            currentScore = executor.runGame(new NNPacMan(new NeuralNet(1,1,3,2)), new MASController(controllers), 40);
             statistics.tumSonuclar.add(currentScore);
             totalScore += currentScore;
             if (currentScore > max){
                 max = currentScore;
                 maxIndex=i;
+                //JOptionPane.showMessageDialog(new JFrame(), "En yuksek.");
             }
 
             if(currentScore < min)
@@ -72,12 +72,12 @@ public class Main {
         average = totalScore/loop;
         System.out.println("average score: "+ average +" Max score: " + max + " Min score: " + min + " Max score order:" + maxIndex);
 
-
+        printResultsToAFile(statistics.tumSonuclar, "StarterPacmanOneJunctionVsStarterGhostTeam1000Game.txt");
         Statistics.calculateStatistics();
 
-        printResultsToAFile(statistics.tumSonuclar, "tumSonuclarSirali.txt");
 
-         */
+
+
 
 
 
