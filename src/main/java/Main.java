@@ -1,16 +1,16 @@
 
 //import entrants.ghosts.enesbehlul.*;
-import examples.StarterNNPacMan.NeuralNet;
-import examples.StarterNNPacMan.examples.*;
 import examples.StarterGhost.*;
-//import entrants.pacman.enesbehlul.*;
+import entrants.pacman.enesbehlul.*;
 import pacman.Executor;
 import pacman.controllers.IndividualGhostController;
+import pacman.controllers.KeyBoardInput;
 import pacman.controllers.MASController;
 import pacman.game.Constants.*;
+import pacman.game.internal.POType;
+import pacman.game.util.Stats;
 
 
-import javax.swing.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -27,6 +27,7 @@ public class Main {
                 .setVisual(true)
                 //.setPOType(POType.RADIUS)
                 //.setPacmanPO(false)
+                .setPOType(POType.RADIUS)
                 .setTickLimit(130000)
                 .build();
 
@@ -46,16 +47,14 @@ public class Main {
         //executor.runGame(new KlavyeKontrol(new KeyBoardInput()), new MASController(controllers), 40);
 
 
-
-
-        int loop = 1000;
+        int loop = 3;
         int totalScore = 0, currentScore = 0;
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
         int average;
         int maxIndex = -1;
         for (int i = 0; i < loop; i++){
-            currentScore = executor.runGame(new NNPacMan(new NeuralNet(1,1,3,2)), new MASController(controllers), 40);
+            currentScore = executor.runGame(new MyPacMan(), new MASController(controllers), 40);
             statistics.tumSonuclar.add(currentScore);
             totalScore += currentScore;
             if (currentScore > max){
@@ -76,6 +75,8 @@ public class Main {
         Statistics.calculateStatistics();
 
 
+
+     
 
 
 
@@ -100,7 +101,7 @@ public class Main {
         // daha sonra oyunu replay yapabilmek icin kaydediyoruz
         //executor.runGameTimedRecorded(new MyPacMan(), new MASController(controllers), "stats");
 
-        /*
+/*
         int loop = 100;
         int maxIndex = -1;
         double totalScore = 0;
@@ -108,7 +109,7 @@ public class Main {
         double max = Integer.MIN_VALUE;
         double min = Integer.MAX_VALUE;
         for (int i = 0; i < 100; i++){
-            Stats a = executor.runGameTimedRecorded(new MyPacMan1(), new MASController(controllers), i+ ". statsFile.txt");
+            Stats a = executor.runGameTimedRecorded(new MyPacMan(), new MASController(controllers), i+ ". statsFile.txt");
             currentScore = a.getMax();
             totalScore += currentScore;
             if (currentScore > max){
@@ -119,10 +120,10 @@ public class Main {
             if(currentScore < min)
                 min = currentScore;
         }
-        System.out.println(maxIndex + ". index, max score "+ max + " average: " + totalScore/100);
-        */
+        System.out.println(maxIndex + ". index, max score "+ max + " average: " + totalScore/loop);
+*/
 
-        //executor.replayGame("replays/56. statsFile.txt", true);
+        //executor.replayGame("MAX.txt", true);
     }
 
 

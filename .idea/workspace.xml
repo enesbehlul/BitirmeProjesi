@@ -4,14 +4,11 @@
     <list default="true" id="65c81aa2-161b-4730-95b8-0b16ac8a0355" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/belgeler/GANTT CHART.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/GANTT CHART.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/belgeler/Tez/MsPacManBitirmeTeziFormatliNihai.docx" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/Tez/MsPacManBitirmeTeziFormatliNihai.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/belgeler/Tez/MsPacManBitirmeTeziFormatliNihai.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/belgeler/Tez/MsPacManBitirmeTeziFormatliNihai.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/replays/56. statsFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/replays/56. statsFile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan1.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entrants/pacman/enesbehlul/MyPacMan1.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +43,7 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
@@ -235,6 +232,24 @@
       <workItem from="1591088441428" duration="684000" />
       <workItem from="1591102338877" duration="12127000" />
       <workItem from="1591178418296" duration="15113000" />
+      <workItem from="1591368844417" duration="1203000" />
+      <workItem from="1591394201659" duration="600000" />
+      <workItem from="1591400448170" duration="1706000" />
+      <workItem from="1591433396347" duration="2930000" />
+      <workItem from="1591475788137" duration="1163000" />
+      <workItem from="1591477142897" duration="1547000" />
+      <workItem from="1591480807565" duration="343000" />
+      <workItem from="1591802716982" duration="1888000" />
+      <workItem from="1591881276339" duration="5370000" />
+      <workItem from="1591946023172" duration="3743000" />
+      <workItem from="1592082527397" duration="901000" />
+      <workItem from="1592837645269" duration="7000" />
+      <workItem from="1593264034283" duration="829000" />
+      <workItem from="1593511721006" duration="3293000" />
+      <workItem from="1594384368852" duration="7000" />
+      <workItem from="1595231275904" duration="373000" />
+      <workItem from="1595405350149" duration="597000" />
+      <workItem from="1595423986292" duration="599000" />
     </task>
     <servers />
   </component>
@@ -278,38 +293,42 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="702" y="168" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1588176324822" />
-    <state width="1557" height="199" key="GridCell.Tab.0.bottom" timestamp="1591233212288">
+    <state width="1557" height="199" key="GridCell.Tab.0.bottom" timestamp="1595405949756">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="199" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1591233212288" />
-    <state width="1557" height="199" key="GridCell.Tab.0.center" timestamp="1591233212288">
+    <state width="1557" height="199" key="GridCell.Tab.0.bottom/0.0.1600.860/-1280.-66.1280.984@0.0.1600.860" timestamp="1593516287266" />
+    <state width="1557" height="199" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1595405949756" />
+    <state width="1557" height="199" key="GridCell.Tab.0.center" timestamp="1595405949756">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="199" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1591233212288" />
-    <state width="1557" height="199" key="GridCell.Tab.0.left" timestamp="1591233212288">
+    <state width="1557" height="199" key="GridCell.Tab.0.center/0.0.1600.860/-1280.-66.1280.984@0.0.1600.860" timestamp="1593516287266" />
+    <state width="1557" height="199" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1595405949756" />
+    <state width="1557" height="199" key="GridCell.Tab.0.left" timestamp="1595405949756">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="199" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1591233212288" />
-    <state width="1557" height="199" key="GridCell.Tab.0.right" timestamp="1591233212288">
+    <state width="1557" height="199" key="GridCell.Tab.0.left/0.0.1600.860/-1280.-66.1280.984@0.0.1600.860" timestamp="1593516287266" />
+    <state width="1557" height="199" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1595405949756" />
+    <state width="1557" height="199" key="GridCell.Tab.0.right" timestamp="1595405949756">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="199" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1591233212288" />
-    <state width="1557" height="227" key="GridCell.Tab.1.bottom" timestamp="1591233212257">
+    <state width="1557" height="199" key="GridCell.Tab.0.right/0.0.1600.860/-1280.-66.1280.984@0.0.1600.860" timestamp="1593516287266" />
+    <state width="1557" height="199" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1595405949756" />
+    <state width="1557" height="229" key="GridCell.Tab.1.bottom" timestamp="1591899989600">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="227" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1591233212257" />
-    <state width="1557" height="227" key="GridCell.Tab.1.center" timestamp="1591233212256">
+    <state width="1557" height="229" key="GridCell.Tab.1.bottom/0.0.1600.860@0.0.1600.860" timestamp="1591899989600" />
+    <state width="1557" height="229" key="GridCell.Tab.1.center" timestamp="1591899989600">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="227" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1591233212256" />
-    <state width="1557" height="227" key="GridCell.Tab.1.left" timestamp="1591233212256">
+    <state width="1557" height="229" key="GridCell.Tab.1.center/0.0.1600.860@0.0.1600.860" timestamp="1591899989600" />
+    <state width="1557" height="229" key="GridCell.Tab.1.left" timestamp="1591899989600">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="227" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1591233212256" />
-    <state width="1557" height="227" key="GridCell.Tab.1.right" timestamp="1591233212256">
+    <state width="1557" height="229" key="GridCell.Tab.1.left/0.0.1600.860@0.0.1600.860" timestamp="1591899989600" />
+    <state width="1557" height="229" key="GridCell.Tab.1.right" timestamp="1591899989600">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1557" height="227" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1591233212256" />
+    <state width="1557" height="229" key="GridCell.Tab.1.right/0.0.1600.860@0.0.1600.860" timestamp="1591899989600" />
     <state x="330" y="85" key="Maven.ArtifactSearchDialog" timestamp="1589625182002">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -318,10 +337,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="713" y="132" key="RollbackChangesDialog/0.0.1600.860@0.0.1600.860" timestamp="1589977710189" />
-    <state x="301" y="9" key="SettingsEditor" timestamp="1589483318175">
+    <state x="301" y="9" key="SettingsEditor" timestamp="1591806069268">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="301" y="9" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1589483318175" />
+    <state x="301" y="9" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1591806069268" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1589819365459">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -351,9 +370,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/entrants/pacman/enesbehlul/MyPacMan.java</url>
-          <line>174</line>
-          <option name="timeStamp" value="21" />
+          <url>jar://$MAVEN_REPOSITORY$/uk/co/pacmanvghosts/pacman-main/2.0.1.0/pacman-main-2.0.1.0-sources.jar!/pacman/Executor.java</url>
+          <line>542</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
